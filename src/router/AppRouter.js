@@ -1,5 +1,5 @@
-import { BrowserRouter, Route, Router } from "react-router-dom";
-import PageHome from "../pages/pageHome";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import PageHome from "../pages/PageHome";
 
 function AppRouter(){
     return(

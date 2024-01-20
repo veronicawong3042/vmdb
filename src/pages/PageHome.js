@@ -1,5 +1,5 @@
 function PageHome (){
-    return <main id="home"></main>
+    return <h2>Home</h2>
 }
 
 export default PageHome;
