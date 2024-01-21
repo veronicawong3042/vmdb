@@ -15,6 +15,7 @@ function PageHome() {
                 alert(error);
             });
     }, []);
+
     return <main id="home">
     <MoviesContainer title="Popular Movies" moviesData={popularMovies}/>
     </main>
