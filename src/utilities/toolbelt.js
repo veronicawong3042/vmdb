@@ -6,4 +6,9 @@ function dateConvert (str) {
     return (dateString).toLocaleDateString("en-US", options);
 ;}
 
-export {dateConvert};
+
+function truncate (input) {
+    return input.length > 100 ? `${input.substring(0, 100)}...` : input;
+}
+
+export {dateConvert,truncate};
