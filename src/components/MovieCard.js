@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getMovieImages } from "../utilities/api";
-import { dateConvert } from "../utilities/toolbelt";
+import { dateConvert,truncate } from "../utilities/toolbelt";
 
 const defaultMovieData = {
   "adult": false,
@@ -42,20 +42,22 @@ function MovieCard({ movieData = defaultMovieData}) {
 
   }, []);
 
+  
+
   return (
     <div className="movie-card">
 
       <div>
         {images && (
           <div>
-            <img src={`https://image.tmdb.org/t/p/w300/${images.poster_path}`} alt={movieData.original_title} />
+            <img src={`https://image.tmdb.org/t/p/w185/${images.poster_path}`} alt={movieData.original_title} />
           </div>
         )} 
 
       <h3>{movieData.title}</h3>
       <h4>{dateConvert(movieData.release_date)}</h4>
-      <h4>{movieData.vote_average}</h4>
-      <p>{movieData.overview}</p>
+      <h4>{(movieData.vote_average).toFixed(1)}</h4>
+      <p>{truncate(movieData.overview)}</p>
 
 
       </div>
