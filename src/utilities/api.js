@@ -19,4 +19,23 @@ function getPopularMovies() {
         });
 }
 
-export { getPopularMovies };
+function getMovieImages(movieId) {
+    return fetch(`${API_ENDPOINT}/movie/${movieId}`, {
+        headers: {
+            accept: 'application/json',
+            Authorization: `Bearer ${API_TOKEN}`
+        }
+    })
+    .then((response) => {
+        // debugger;
+        if (!response.ok) {
+            throw new Error("Network response not ok");
+        }
+        return response.json();
+    })
+    .catch((error) => {
+        throw error;
+    });
+}
+
+export { getPopularMovies,getMovieImages};
