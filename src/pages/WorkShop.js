@@ -1,8 +1,8 @@
 import MovieCard from "../components/MovieCard";
 
-
-function WorkShop(){
-    return(
+function WorkShop() {
+    
+    return (
         <div>
             <h2>WorkShop</h2>
             <MovieCard />
