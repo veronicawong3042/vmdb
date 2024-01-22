@@ -59,10 +59,11 @@ function MovieCard({ movieData = defaultMovieData}) {
       <h4>{(movieData.vote_average).toFixed(1)}</h4>
       <p>{truncate(movieData.overview)}</p>
 
+      <button>&#9829;</button>
+      <button>More Info</button>
 
       </div>
 
-      <button>&#9829;</button>
     </div>
   )
 };
