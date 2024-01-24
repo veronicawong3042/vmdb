@@ -1,12 +1,14 @@
 // convert date format
 // e.g. "2004-04-01" to "April 1, 2004"
-function dateConvert (str) {
-    const dateString = new Date (Date(str));
+function dateConvert (str,timeZone = "UTC") {
+    const dateString = str;
     const options = {
-        year: "numeric", month: "long", day: "numeric"
+        year: "numeric", month: "long", day: "numeric",
+        timeZone: timeZone
     }
-    return (dateString).toLocaleDateString("en-US", options);
-;}
+    return new Date(dateString).toLocaleDateString(undefined, options);
+
+}
 
 // truncate paragraph
 // If the content is over 100 characters, then output the first 100 characters; 
@@ -15,4 +17,10 @@ function truncate (input) {
     return input.length > 100 ? `${input.substring(0, 100)}...` : input;
 }
 
-export {dateConvert,truncate};
+// get current year
+function getYear(){
+    const d = new Date();
+    return d.getFullYear();
+}
+
+export {dateConvert,truncate,getYear};
