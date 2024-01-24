@@ -11,7 +11,7 @@ function WorkShop() {
         <div>
             <h2>WorkShop</h2>
             <MovieCard />
-            <Footer />
+            
         </div>
     );
 }
