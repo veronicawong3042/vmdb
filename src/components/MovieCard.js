@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { getMovieImages } from "../utilities/api";
-import { dateConvert,truncate } from "../utilities/toolbelt";
+import { dateConvert, truncate } from "../utilities/toolbelt";
+import { FavoriteButton } from "./FavouriteButton";
+import { useNavigate } from "react-router-dom";
 
 const defaultMovieData = {
   "adult": false,
@@ -25,46 +27,39 @@ const defaultMovieData = {
 
 
 
-function MovieCard({ movieData = defaultMovieData}) {
+function MovieCard({ movieData = defaultMovieData }) {
 
-  const [images, setImages] = useState([]);
-
-  useEffect(() => {
-    getMovieImages(movieData.id)
-      .then((data) => {
-        // debugger;
-        console.log(data);
-        setImages(data);
-      })
-      .catch((error) => {
-        alert(error);
-      });
-
-  }, []);
-
-  
+  const navigate = useNavigate();
 
   return (
     <div className="movie-card">
 
-      <div>
-        {images && (
-          <div>
-            <img src={`https://image.tmdb.org/t/p/w185/${images.poster_path}`} alt={movieData.original_title} />
-          </div>
-        )} 
+      <div
+        onClick={() => {
+          navigate(`/movie/${movieData.id}`);
+        }}
+        className="movie-card"
+      >
 
-      <h3>{movieData.title}</h3>
-      <h4>{dateConvert(movieData.release_date)}</h4>
-      <h4>{(movieData.vote_average).toFixed(1)}</h4>
-      <p>{truncate(movieData.overview)}</p>
+        <img src={`https://image.tmdb.org/t/p/w185/${movieData.poster_path}`} alt={movieData.original_title} />
 
-      <button>Add Favourite &#9829;</button>
-      <button>More Info</button>
+        <h3>{movieData.title}</h3>
+        <h4>{dateConvert(movieData.release_date)}</h4>
+        <h4>{(movieData.vote_average).toFixed(1)}</h4>
+        <p>{truncate(movieData.overview)}</p>
+
+        <FavoriteButton />
+        <button
+          onClick={() => {
+            navigate(`/movie/${movieData.id}`);
+          }}
+        >
+          More Info
+        </button>
 
       </div>
 
-    </div>
+    </div >
   )
 };
 
