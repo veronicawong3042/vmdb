@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { getMovieImages } from "../utilities/api";
 import { dateConvert, truncate } from "../utilities/toolbelt";
 import { FavoriteButton } from "./FavouriteButton";
 import { useNavigate } from "react-router-dom";
