@@ -4,11 +4,14 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 import AppRouter from './router/AppRouter';
+import { GlobalProvider } from './context/GlobalProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppRouter />
+    <GlobalProvider>
+      <AppRouter />
+    </GlobalProvider>
   </React.StrictMode>
 );
 
