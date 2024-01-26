@@ -1,4 +1,4 @@
-import { dateConvert, truncate } from "../utilities/toolbelt";
+import { formatReleaseDate, truncate } from "../utilities/toolbelt";
 import { FavoriteButton } from "./FavouriteButton";
 import { useNavigate } from "react-router-dom";
 import { IMAGE_URL_BASE } from "../utilities/api";
@@ -45,12 +45,13 @@ function MovieCard({ movieData = defaultMovieData }) {
         <div className="title-and-release">
 
           <h3 className="title">{movieData.title}</h3>
-          <h4 className="release-date">{dateConvert(movieData.release_date)}</h4>
+          <h4 className="release-date">{formatReleaseDate(movieData.release_date)}</h4>
           <h4>{(movieData.vote_average).toFixed(1)}</h4>
           <p>{truncate(movieData.overview)}</p>
         </div>
         
         {/* <FavoriteButton /> */}
+        <FavoriteButton movieData={movieData}/>
         <button
           onClick={() => {
             navigate(`/movie/${movieData.id}`);
