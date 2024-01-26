@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
 import { dateConvert, truncate } from "../utilities/toolbelt";
 import { FavoriteButton } from "./FavouriteButton";
 import { useNavigate } from "react-router-dom";
+import { IMAGE_URL_BASE } from "../utilities/api";
 
 const defaultMovieData = {
   "adult": false,
@@ -28,6 +28,7 @@ const defaultMovieData = {
 
 function MovieCard({ movieData = defaultMovieData }) {
 
+  const imagePath = `${IMAGE_URL_BASE}/w185${movieData.poster_path}`;
   const navigate = useNavigate();
 
   return (
@@ -40,13 +41,15 @@ function MovieCard({ movieData = defaultMovieData }) {
         className="movie-card"
       >
 
-        <img src={`https://image.tmdb.org/t/p/w185/${movieData.poster_path}`} alt={movieData.original_title} />
+        <img src={imagePath} alt={movieData.title} className="movie-card-image" />
+        <div className="title-and-release">
 
-        <h3>{movieData.title}</h3>
-        <h4>{dateConvert(movieData.release_date)}</h4>
-        <h4>{(movieData.vote_average).toFixed(1)}</h4>
-        <p>{truncate(movieData.overview)}</p>
-
+          <h3 className="title">{movieData.title}</h3>
+          <h4 className="release-date">{dateConvert(movieData.release_date)}</h4>
+          <h4>{(movieData.vote_average).toFixed(1)}</h4>
+          <p>{truncate(movieData.overview)}</p>
+        </div>
+        
         {/* <FavoriteButton /> */}
         <button
           onClick={() => {
