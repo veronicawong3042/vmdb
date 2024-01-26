@@ -47,7 +47,7 @@ function MovieCard({ movieData = defaultMovieData }) {
         <h4>{(movieData.vote_average).toFixed(1)}</h4>
         <p>{truncate(movieData.overview)}</p>
 
-        <FavoriteButton />
+        {/* <FavoriteButton /> */}
         <button
           onClick={() => {
             navigate(`/movie/${movieData.id}`);
