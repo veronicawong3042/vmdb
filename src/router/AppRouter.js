@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PageSingleMovie from "../pages/PageSingleMovie";
 import WorkShop from "../pages/WorkShop";
-import {GlobalProvider} from "../context/GlobalContext";
+import {GlobalProvider} from "../context/GlobalProvider";
 import PopularMovies from "../pages/PopularMovies";
 import NowPlayingMovies from "../pages/NowPlayingMovies";
 import UpcomingMovies from "../pages/UpcomingMovies";
@@ -13,6 +13,7 @@ function AppRouter () {
         <GlobalProvider>
     {/* Header Component */}
         <Routes>
+            {/* no route set up for '/' */}
             <Route path="popular" element={<PopularMovies/>}/>
             <Route path="now-playing" element={<NowPlayingMovies/>}/>
             <Route path="upcoming" element={<UpcomingMovies/>}/>
