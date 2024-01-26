@@ -19,4 +19,5 @@ function getPopularMovies() {
         });
 }
 
-export { getPopularMovies };
+
+export { getPopularMovies};
