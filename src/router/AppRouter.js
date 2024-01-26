@@ -7,6 +7,8 @@ import PopularMovies from "../pages/PopularMovies";
 import NowPlayingMovies from "../pages/NowPlayingMovies";
 import UpcomingMovies from "../pages/UpcomingMovies";
 import TopRatedMovies from "../pages/TopRatedMovies";
+import PageFavorite from "../pages/PageFavorite";
+import PageAbout from "../pages/PageAbout";
 import Footer from "../components/Footer";
 
 function AppRouter () {
@@ -18,6 +20,8 @@ function AppRouter () {
             {/* no route set up for '/' */}
             
             <Route path="/" element={<PageHome/>}/>
+            <Route path="/favorite" element={<PageFavorite/>}/>
+            <Route path="/about" element={<PageAbout/>}/>
             <Route path="/popular" element={<PopularMovies/>}/>
             <Route path="/now-playing" element={<NowPlayingMovies/>}/>
             <Route path="/upcoming" element={<UpcomingMovies/>}/>
