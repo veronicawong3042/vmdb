@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getMovieById } from "../utilities/api";
 import { filterVideos, formatReleaseDate } from "../utilities/toolbelt";
-import FavoriteButton from "../components/FavoriteButton";
+import FavouriteButton from "../components/FavouriteButton";
 
 function PageSingleMovie() {
     const params = useParams();
@@ -31,7 +31,7 @@ function PageSingleMovie() {
                     <h1>{movieData.title}</h1>
                     <div>
                         <h2>{formatReleaseDate(movieData.release_date)}</h2>
-                        <FavoriteButton movieData={movieData} />
+                        <FavouriteButton movieData={movieData} />
                     </div>
                     <p>{movieData.overview}</p>
                     <div className="movie-videos">

@@ -1,5 +1,5 @@
 import { formatReleaseDate, truncate } from "../utilities/toolbelt";
-import { FavoriteButton } from "./FavouriteButton";
+import  FavouriteButton  from "./FavouriteButton";
 import { useNavigate } from "react-router-dom";
 import { IMAGE_URL_BASE } from "../utilities/api";
 
@@ -50,8 +50,8 @@ function MovieCard({ movieData = defaultMovieData }) {
           <p>{truncate(movieData.overview)}</p>
         </div>
         
-        {/* <FavoriteButton /> */}
-        <FavoriteButton movieData={movieData}/>
+        
+        <FavouriteButton movieData={movieData}/>
         <button
           onClick={() => {
             navigate(`/movie/${movieData.id}`);
