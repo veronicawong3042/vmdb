@@ -10,15 +10,16 @@ import TopRatedMovies from "../pages/TopRatedMovies";
 import PageFavorite from "../pages/PageFavorite";
 import PageAbout from "../pages/PageAbout";
 import Footer from "../components/Footer";
+import Nav from "../components/Nav";
 
 function AppRouter () {
     return (
     <BrowserRouter>
         <GlobalProvider>
     {/* Header Component */}
+            <Nav />
         <Routes>
             {/* no route set up for '/' */}
-            
             <Route path="/" element={<PageHome/>}/>
             <Route path="/favorite" element={<PageFavorite/>}/>
             <Route path="/about" element={<PageAbout/>}/>
