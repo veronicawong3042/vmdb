@@ -11,6 +11,7 @@ import PageFavorite from "../pages/PageFavorite";
 import PageAbout from "../pages/PageAbout";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
+import MovieNav from "../components/MovieNav";
 
 function AppRouter () {
     return (
@@ -18,6 +19,7 @@ function AppRouter () {
         <GlobalProvider>
     {/* Header Component */}
             <Nav />
+            <MovieNav />
         <Routes>
             {/* no route set up for '/' */}
             <Route path="/" element={<PageHome/>}/>
