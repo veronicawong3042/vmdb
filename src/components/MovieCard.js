@@ -3,6 +3,7 @@ import  FavouriteButton  from "./FavouriteButton";
 import { useNavigate } from "react-router-dom";
 import { IMAGE_URL_BASE } from "../utilities/api";
 
+
 const defaultMovieData = {
   "adult": false,
   "backdrop_path": "/rz8GGX5Id2hCW1KzAIY4xwbQw1w.jpg",
@@ -32,7 +33,6 @@ function MovieCard({ movieData = defaultMovieData }) {
   const navigate = useNavigate();
 
   return (
-    <div className="movie-card">
 
       <div
         onClick={() => {
@@ -56,13 +56,13 @@ function MovieCard({ movieData = defaultMovieData }) {
           onClick={() => {
             navigate(`/movie/${movieData.id}`);
           }}
+          className="more-info"
         >
           More Info
         </button>
 
       </div>
 
-    </div >
   )
 };
 

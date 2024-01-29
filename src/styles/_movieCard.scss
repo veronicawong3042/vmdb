@@ -1,0 +1,74 @@
+// movie card
+@use 'variables' as *;
+
+
+
+.movie-card {
+    
+    position: relative;
+    max-width:185px ;
+    
+    
+    img {
+    }
+
+    .title-and-release {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: .5rem;
+
+        .title {
+            margin-bottom: 0;
+        }
+
+        .release-date{
+            font-size: 1rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            margin: 0;
+        }
+    }
+
+    .favorite {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: .5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: transparent;
+        border: 1px solid black;
+        border-radius: 50%;
+        
+        svg {
+            fill: black;
+            position: absolute;
+            left: 4.5px;
+            right: 0;
+            top: 5px;
+        }
+    }
+    .favorited {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        svg {
+            fill:red ;
+        }
+    }
+
+    .more-info {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: fit-content;
+        background-color: yellow;
+        border-radius: 25px;
+    }
+}
+
