@@ -4,7 +4,7 @@
 // If the content is over 100 characters, then output the first 100 characters; 
 // otherwise, output all the content
 function truncate (input) {
-    return input.length > 100 ? `${input.substring(0, 100)}...` : input;
+    return input.length > 100 ? `${input.substring(0, 70)}...` : input;
 }
 
 // get current year
