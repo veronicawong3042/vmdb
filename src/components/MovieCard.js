@@ -38,28 +38,29 @@ function MovieCard({ movieData = defaultMovieData }) {
       onClick={() => {
         navigate(`/movie/${movieData.id}`);
       }}
-      className="movie-card"
+      className="movie-card-top"
     >
-        <img src={imagePath} alt={movieData.title} className="movie-card-image" />
+      <img src={imagePath} alt={movieData.title} className="movie-card-image" />
       <div className="movie-card-container">
+        <div className="rating-and-favbutton">
+          <h4 className="rating">{(movieData.vote_average).toFixed(1)}</h4>
+          <FavouriteButton movieData={movieData} />
+        </div>
         <div className="title-and-release">
 
           <h3 className="title">{movieData.title}</h3>
           <h4 className="release-date">{formatReleaseDate(movieData.release_date)}</h4>
-          <h4>{(movieData.vote_average).toFixed(1)}</h4>
           <p>{truncate(movieData.overview)}</p>
         </div>
-
-
-        <FavouriteButton movieData={movieData} />
-        <button
-          onClick={() => {
-            navigate(`/movie/${movieData.id}`);
-          }}
-          className="more-info"
-        >
-          More Info
-        </button>
+    
+      <button
+        onClick={() => {
+          navigate(`/movie/${movieData.id}`);
+        }}
+        className="more-info"
+      >
+        More Info
+      </button>
       </div>
     </div>
 
