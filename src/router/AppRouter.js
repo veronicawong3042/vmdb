@@ -29,7 +29,7 @@ function AppRouter () {
             <Route path="/movie/:id" element={<PageSingleMovie/>}/>
             <Route path="/workshop" element={<WorkShop/>}/>
         </Routes>
-        <Footer />
+        <Footer author={'Candy Kwong, Marie Huang, Veronica Wong'}/>
         
     {/* Footer Component */}
         </GlobalProvider>
