@@ -1,5 +1,5 @@
 import { formatReleaseDate, truncate } from "../utilities/toolbelt";
-import  FavouriteButton  from "./FavouriteButton";
+import FavouriteButton from "./FavouriteButton";
 import { useNavigate } from "react-router-dom";
 import { IMAGE_URL_BASE } from "../utilities/api";
 
@@ -34,14 +34,14 @@ function MovieCard({ movieData = defaultMovieData }) {
 
   return (
 
-      <div
-        onClick={() => {
-          navigate(`/movie/${movieData.id}`);
-        }}
-        className="movie-card"
-      >
-
+    <div
+      onClick={() => {
+        navigate(`/movie/${movieData.id}`);
+      }}
+      className="movie-card"
+    >
         <img src={imagePath} alt={movieData.title} className="movie-card-image" />
+      <div className="movie-card-container">
         <div className="title-and-release">
 
           <h3 className="title">{movieData.title}</h3>
@@ -49,9 +49,9 @@ function MovieCard({ movieData = defaultMovieData }) {
           <h4>{(movieData.vote_average).toFixed(1)}</h4>
           <p>{truncate(movieData.overview)}</p>
         </div>
-        
-        
-        <FavouriteButton movieData={movieData}/>
+
+
+        <FavouriteButton movieData={movieData} />
         <button
           onClick={() => {
             navigate(`/movie/${movieData.id}`);
@@ -60,8 +60,8 @@ function MovieCard({ movieData = defaultMovieData }) {
         >
           More Info
         </button>
-
       </div>
+    </div>
 
   )
 };
