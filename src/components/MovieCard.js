@@ -1,4 +1,4 @@
-import { formatReleaseDate, truncate } from "../utilities/toolbelt";
+import { formatReleaseDate, truncateTitle,truncateOverview } from "../utilities/toolbelt";
 import FavouriteButton from "./FavouriteButton";
 import { useNavigate } from "react-router-dom";
 import { IMAGE_URL_BASE } from "../utilities/api";
@@ -38,7 +38,7 @@ function MovieCard({ movieData = defaultMovieData }) {
       onClick={() => {
         navigate(`/movie/${movieData.id}`);
       }}
-      className="movie-card-top"
+      className="movie-card"
     >
       <img src={imagePath} alt={movieData.title} className="movie-card-image" />
       <div className="movie-card-container">
@@ -48,9 +48,9 @@ function MovieCard({ movieData = defaultMovieData }) {
         </div>
         <div className="title-and-release">
 
-          <h3 className="title">{movieData.title}</h3>
+          <h3 className="title">{truncateTitle(movieData.title)}</h3>
           <h4 className="release-date">{formatReleaseDate(movieData.release_date)}</h4>
-          <p>{truncate(movieData.overview)}</p>
+          <p className="overview">{truncateOverview(movieData.overview)}</p>
         </div>
     
       <button

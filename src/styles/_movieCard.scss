@@ -1,17 +1,17 @@
 // movie card
 @use 'variables' as *;
 
-// .movie-card {
+.movie-card {
 
-//     position: relative;
-//     max-width: 185px;
+    position: relative;
+    max-width: 185px;
 
-//     .movie-card-container {
-//         display: none;
-//     }
-// }
+    .movie-card-container {
+        display: none;
+    }
+}
 
-.movie-card-top {
+.movie-card:hover {
 
     position: relative;
     max-width: 185px;
@@ -36,10 +36,11 @@
     .title-and-release {
 
         margin: 1rem .5rem;
-        text-align: left;
+        // text-align: left;
 
         .title {
-            margin-bottom: 0;
+            // margin-bottom: 0;
+            margin: 0;
         }
 
         .release-date {
@@ -83,12 +84,19 @@
     }
 
     .more-info {
-
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 2rem;
         padding: .3rem;
         margin: 0 auto;
         width: 5.5rem;
         background-color: yellow;
         border-radius: 25px;
+    }
+
+    .overview {
+        text-align: left;
     }
 
     .rating-and-favbutton {
@@ -98,6 +106,7 @@
     }
 
     .rating {
+        font-size: 1.2rem;
         margin: 0.5rem;
     }
 }
@@ -127,10 +136,11 @@
     .title-and-release {
 
         margin: 1rem .5rem;
-        text-align: left;
+        
 
         .title {
             margin-bottom: 0;
+            text-align: center;
         }
 
         .release-date {
@@ -138,6 +148,10 @@
             font-weight: 400;
             text-transform: capitalize;
             margin: 0;
+        }
+
+        .overview {
+            text-align: left;
         }
     }
 
@@ -174,7 +188,10 @@
     }
 
     .more-info {
-
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 4rem;
         padding: .3rem;
         margin: 0 auto;
         width: 5.5rem;
@@ -192,6 +209,7 @@
     }
 
     .rating {
+        font-size: 1.2rem;
         margin: 0.5rem;
     }
 }
