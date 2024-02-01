@@ -31,7 +31,7 @@ const SearchResults = () => {
             <div>
                 <h2>Search results for "{searchQuery}" :</h2>
                 <section>
-                   <MovieContainer title="placeholder" moviesData={movies}/>
+                   <MovieContainer moviesData={movies}/>
                 </section>
             </div>
         );
