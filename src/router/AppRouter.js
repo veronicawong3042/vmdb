@@ -12,6 +12,7 @@ import PageAbout from "../pages/PageAbout";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import MovieNav from "../components/MovieNav";
+import SearchResults from "../pages/SearchResults";
 
 function AppRouter () {
     return (
@@ -31,6 +32,7 @@ function AppRouter () {
             <Route path="/top-rated" element={<TopRatedMovies/>}/>
             <Route path="/movie/:id" element={<PageSingleMovie/>}/>
             <Route path="/workshop" element={<WorkShop/>}/>
+            <Route path="/SearchResults" element={<SearchResults />} />
         </Routes>
         <Footer />
         
