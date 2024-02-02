@@ -1,0 +1,32 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+const SearchInput = () => {
+    const [searchInput, setSearchInput] = useState('');
+    const navigate = useNavigate();
+
+    function handleSearch(e) {
+        e.preventDefault();
+        const searchValue = e.target.elements['search-input'].value;
+
+        setSearchInput(searchValue);
+        navigate(`/SearchResults?query=${searchValue}`);
+        e.target.reset()
+    }
+
+    return (
+        <section className="search-form">
+            <form onSubmit={handleSearch}>
+                <input
+                    type="text"
+                    id='search-input'
+                    name='search-input'
+                    placeholder="Search movies"
+                />
+                <button type="submit">Search</button>
+            </form>
+        </section>
+    );
+};
+
+export default SearchInput;

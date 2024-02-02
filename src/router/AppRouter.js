@@ -10,15 +10,19 @@ import TopRatedMovies from "../pages/TopRatedMovies";
 import PageFavorite from "../pages/PageFavorite";
 import PageAbout from "../pages/PageAbout";
 import Footer from "../components/Footer";
+import Nav from "../components/Nav";
+import MovieNav from "../components/MovieNav";
+import SearchResults from "../pages/SearchResults";
 
 function AppRouter () {
     return (
     <BrowserRouter>
         <GlobalProvider>
     {/* Header Component */}
+            <Nav />
+            <MovieNav />
         <Routes>
             {/* no route set up for '/' */}
-            
             <Route path="/" element={<PageHome/>}/>
             <Route path="/favorite" element={<PageFavorite/>}/>
             <Route path="/about" element={<PageAbout/>}/>
@@ -28,6 +32,7 @@ function AppRouter () {
             <Route path="/top-rated" element={<TopRatedMovies/>}/>
             <Route path="/movie/:id" element={<PageSingleMovie/>}/>
             <Route path="/workshop" element={<WorkShop/>}/>
+            <Route path="/SearchResults" element={<SearchResults />} />
         </Routes>
         <Footer author={'Candy Kwong, Marie Huang, Veronica Wong'}/>
         

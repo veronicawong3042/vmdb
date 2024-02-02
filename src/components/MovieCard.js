@@ -25,9 +25,8 @@ const defaultMovieData = {
   "vote_count": 318
 }
 
-
-
 function MovieCard({ movieData = defaultMovieData }) {
+// function MovieCard() {
 
   const imagePath = `${IMAGE_URL_BASE}/w185${movieData.poster_path}`;
   const navigate = useNavigate();
