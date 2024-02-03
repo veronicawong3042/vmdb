@@ -18,7 +18,7 @@ const SearchResults = () => {
               console.log('Data from search:', data);
             //   debugger;
               setMovies(data.results);
-              console.log(movies)
+              console.log(data.results)
             })
             .catch(error => {
               console.error('Error from search:', error);
