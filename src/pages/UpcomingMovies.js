@@ -19,7 +19,7 @@ function UpcomingMovies() {
   }, []); // Dependency array is empty to run the effect only once when the component mounts
 
   return (
-    <main id="home">
+    <main className="home-movie-cards" id="home">
       <MovieContainer title="Upcoming Movies" moviesData={upcomingMovies} />
     </main>
   );

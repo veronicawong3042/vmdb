@@ -1,0 +1,35 @@
+// movie cards layout
+@use 'variables' as *;
+
+// Break Points
+// $mobile: 20.625em; // 330px
+// $tablet-small: 31.25em; // 500px
+// $tablet-large: 44.375em; // 710px
+// $desktop-small: 48.125em; // 770px
+
+.movie-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    justify-items: center;
+}
+
+.movie-card img {
+    width: 140px;
+    height: auto;
+}
+
+@media(min-width: 29em){
+    .movie-card img {
+        width: 170px;
+        height: auto;
+    }
+}
+
+@media(min-width: $tablet-small){
+    .movie-card img {
+        width: 185px;
+        height: auto;
+    }
+}

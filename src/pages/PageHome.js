@@ -59,7 +59,7 @@ function PopularMovies() {
   }, []); // Dependency array is empty to run the effect only once when the component mounts
 
   return (
-    <main id="home">
+    <main className="home-movie-cards" id="home">
       <MovieContainer title="Popular Movies" moviesData={popularMovies} />
       <MovieContainer title="Now Playing" moviesData={NowPlayingMovies} />
       <MovieContainer title="Upcoming" moviesData={upcomingMovies} />
