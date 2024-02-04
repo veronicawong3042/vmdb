@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getMovieById } from "../utilities/api";
-import { filterVideos, formatReleaseDate } from "../utilities/toolbelt";
+import { filterVideos, formatReleaseDate ,formatTime} from "../utilities/toolbelt";
 import FavouriteButton from "../components/FavouriteButton";
 import { IMAGE_URL_BASE } from "../utilities/api";
 
@@ -24,21 +24,37 @@ function PageSingleMovie() {
     }, [id]);
 
     console.log(movieData);
-    const imagePath = `${IMAGE_URL_BASE}/w185${movieData.poster_path}`;
+    const posterPath = `${IMAGE_URL_BASE}/w185${movieData.poster_path}`;
+    const backdropPath = `${IMAGE_URL_BASE}/w1280${movieData.backdrop_path}`;
     const noPoster = movieData.poster_path === null;
+    const noBackdrop = movieData.backdrop_path === null;
 
     return (
         <div className="movie-page">
             {movieData && (
                 <>
-                    <div className={noPoster ? 'no-poster' : ''}>
-                        <img src={imagePath} alt={movieData.title} className='movie-card-image' />
+                    <div className={`sigle-movie-banner ${noPoster ? 'no-poster' : ''} ${noBackdrop ? 'no-backdrop' : ''}`}>
+                        <img src={backdropPath} alt={movieData.title} className='backdrop-image' />
+                        <img src={posterPath} alt={movieData.title} className='movie-card-image' />
                     </div>
                     <h1>{movieData.title}</h1>
+
                     <div>
                         <h2>{formatReleaseDate(movieData.release_date)}</h2>
                         <FavouriteButton movieData={movieData} />
                     </div>
+                    <p>{formatTime(movieData.runtime)}</p>
+                    <div className="genres">
+                        { movieData.genres
+                            ? movieData.genres.map((genre, index) => (
+                                <span key={index} className="genre">
+                                    {genre.name}
+                                </span>
+                            ))
+                            : ""
+                        }
+                    </div>
+
                     <p>{movieData.overview}</p>
                     <div className="movie-videos">
                         {movieVideos.length > 0 && (

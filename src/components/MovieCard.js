@@ -35,6 +35,7 @@ function MovieCard({ movieData = defaultMovieData }) {
 
   const noPoster = movieData.poster_path === null;
 
+
   return (
 
 
