@@ -1,0 +1,215 @@
+// movie card
+@use 'variables' as *;
+
+.movie-card {
+
+    position: relative;
+    max-width: 185px;
+
+    .movie-card-container {
+        display: none;
+    }
+}
+
+.movie-card:hover {
+
+    position: relative;
+    max-width: 185px;
+    display: inline-block;
+    background: #fff;
+
+    img {
+        opacity: 0.2;
+    }
+
+    .movie-card-container {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: .5rem;
+        height: 100%;
+        text-align: center;
+    }
+
+    .title-and-release {
+
+        margin: 1rem .5rem;
+        // text-align: left;
+
+        .title {
+            // margin-bottom: 0;
+            margin: 0;
+        }
+
+        .release-date {
+            font-size: 1rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            margin: 0;
+        }
+    }
+
+    .favorite {
+
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: .5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: transparent;
+        border: 1px solid black;
+        border-radius: 50%;
+
+        svg {
+            fill: black;
+            position: absolute;
+            left: 4.5px;
+            right: 0;
+            top: 5px;
+        }
+    }
+
+    .favorited {
+        position: relative;
+
+
+        svg {
+            position: absolute;
+
+            fill: red;
+        }
+    }
+
+    .more-info {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 2rem;
+        padding: .3rem;
+        margin: 0 auto;
+        width: 5.5rem;
+        background-color: $theme-yellow;
+        border-radius: 25px;
+    }
+
+    .overview {
+        text-align: left;
+    }
+
+    .rating-and-favbutton {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .rating {
+        font-size: 1.2rem;
+        margin: 0.5rem;
+    }
+}
+
+.movie-card-down {
+
+    position: relative;
+    max-width: 185px;
+    display: inline-block;
+    background: #fff;
+
+    img {
+        opacity: 0.2;
+    }
+
+    .movie-card-container {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: .5rem;
+        height: 100%;
+        text-align: center;
+    }
+
+    .title-and-release {
+
+        margin: 1rem .5rem;
+        
+
+        .title {
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .release-date {
+            font-size: 1rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            margin: 0;
+        }
+
+        .overview {
+            text-align: left;
+        }
+    }
+
+    .favorite {
+
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: .5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: transparent;
+        border: 1px solid black;
+        border-radius: 50%;
+
+        svg {
+            fill: black;
+            position: absolute;
+            left: 4.5px;
+            right: 0;
+            top: 5px;
+        }
+    }
+
+    .favorited {
+        position: relative;
+
+
+        svg {
+            position: absolute;
+
+            fill: red;
+        }
+    }
+
+    .more-info {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 4rem;
+        padding: .3rem;
+        margin: 0 auto;
+        width: 5.5rem;
+        background-color: yellow;
+        border-radius: 25px;
+    }
+
+    .rating-and-favbutton {
+        position: absolute;
+        bottom: 1.2rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .rating {
+        font-size: 1.2rem;
+        margin: 0.5rem;
+    }
+}

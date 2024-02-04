@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalProvider";
+import { FaHeart } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
 
 function FavouriteButton({ movieData }) {
   const { favorites, addToFavorites, removeFromFavorites } =
@@ -21,7 +23,8 @@ function FavouriteButton({ movieData }) {
       onClick={handleFavorite}
       className={`favorite ${isFavorited ? "favorited" : ""}`}
     >
-      &#9829;
+      {isFavorited ? <FaHeart /> : <FaRegHeart />}
+    
     </button>
   );
 }

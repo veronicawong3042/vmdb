@@ -103,4 +103,27 @@ function getMovieById(movieId){
     })
 }
 
-export {getPopularMovies, getNowPlayingMovies, getUpcomingMovies, getTopRatedMovies, getMovieById, IMAGE_URL_BASE,API_ENDPOINT};
+
+function search(searchQuery){
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: `Bearer ${API_TOKEN}`
+    }
+  };
+  
+  return fetch(`${API_ENDPOINT}/search/movie?query=${searchQuery}&include_adult=false&language=en-US&page=1`, options)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .catch(error => {
+        throw error;
+      });
+    }
+
+export {getPopularMovies, getNowPlayingMovies, getUpcomingMovies, getTopRatedMovies, getMovieById, search, IMAGE_URL_BASE, API_ENDPOINT};
+

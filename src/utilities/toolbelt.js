@@ -29,8 +29,12 @@ import {useState} from 'react';
 // truncate paragraph
 // If the content is over 100 characters, then output the first 100 characters; 
 // otherwise, output all the content
-function truncate (input) {
-    return input.length > 100 ? `${input.substring(0, 100)}...` : input;
+function truncateOverview (input) {
+    return input.length > 60 ? `${input.substring(0, 55)}...` : input;
+}
+
+function truncateTitle (input) {
+    return input.length > 20 ? `${input.substring(0, 20)}...` : input;
 }
 
 // get current year
@@ -59,4 +63,4 @@ function filterVideos (videoDataArray) {
     });
 }
 
-export { formatReleaseDate, filterVideos,truncate, getYear };
+export { formatReleaseDate, filterVideos,truncateOverview,truncateTitle, getYear };
