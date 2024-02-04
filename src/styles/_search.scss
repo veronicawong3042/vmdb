@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+.movie-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+@media screen and (min-width: 600px){
+    .movie-cards{
+        margin: 0 auto;
+        width: 100%;
+    }
+}
