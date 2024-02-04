@@ -13,23 +13,29 @@
     gap: 1rem;
     justify-content: center;
     justify-items: center;
-}
 
-.movie-card img {
-    width: 140px;
-    height: auto;
-}
 
-@media(min-width: 29em){
-    .movie-card img {
-        width: 170px;
+    img {
+        width: 140px;
         height: auto;
     }
-}
 
-@media(min-width: $tablet-small){
-    .movie-card img {
-        width: 185px;
-        height: auto;
+    @media(min-width: 29em){
+        img {
+            width: 170px;
+            height: auto;
+        }
     }
+
+    @media(min-width: $tablet-small){
+        img {
+            width: 185px;
+            height: auto;
+        }
+    }
+
+    @media (min-width:$desktop-large) {
+        margin: 0 2rem 0 2rem;
+    }
+
 }
