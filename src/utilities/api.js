@@ -103,6 +103,7 @@ function getMovieById(movieId){
     })
 }
 
+
 function search(searchQuery){
   const options = {
     method: 'GET',
@@ -124,4 +125,5 @@ function search(searchQuery){
       });
     }
 
-export {getPopularMovies, getNowPlayingMovies, getUpcomingMovies, getTopRatedMovies, getMovieById, search, IMAGE_URL_BASE};
+export {getPopularMovies, getNowPlayingMovies, getUpcomingMovies, getTopRatedMovies, getMovieById, search, IMAGE_URL_BASE, API_ENDPOINT};
+
