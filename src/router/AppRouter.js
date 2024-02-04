@@ -38,7 +38,7 @@ function AppRouter () {
             <Route path="/workshop" element={<WorkShop/>}/>
             <Route path="/SearchResults" element={<SearchResults />} />
         </Routes>
-        <Footer author={'Candy Kwong, Marie Huang, Veronica Wong'}/>
+        <Footer />
         
     {/* Footer Component */}
         </GlobalProvider>
