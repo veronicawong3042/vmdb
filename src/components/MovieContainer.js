@@ -1,5 +1,7 @@
 import MovieCard from "./MovieCard";
 
+
+
 function MovieContainer ({title, moviesData}){
 
     return (
