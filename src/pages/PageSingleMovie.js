@@ -3,11 +3,12 @@ import { useParams } from "react-router-dom";
 import { getMovieById } from "../utilities/api";
 import { filterVideos, formatReleaseDate } from "../utilities/toolbelt";
 import FavouriteButton from "../components/FavouriteButton";
+import { IMAGE_URL_BASE } from "../utilities/api";
 
 function PageSingleMovie() {
     const params = useParams();
     const id = params.id;
-    const [movieData, setMovieData] = useState();
+    const [movieData, setMovieData] = useState([]);
     const [movieVideos, setMovieVideos] = useState([]);
 
     useEffect(() => {
@@ -23,11 +24,16 @@ function PageSingleMovie() {
     }, [id]);
 
     console.log(movieData);
+    const imagePath = `${IMAGE_URL_BASE}/w185${movieData.poster_path}`;
+    const noPoster = movieData.poster_path === null;
 
     return (
         <div className="movie-page">
             {movieData && (
                 <>
+                    <div className={noPoster ? 'no-poster' : ''}>
+                        <img src={imagePath} alt={movieData.title} className='movie-card-image' />
+                    </div>
                     <h1>{movieData.title}</h1>
                     <div>
                         <h2>{formatReleaseDate(movieData.release_date)}</h2>
@@ -44,6 +50,7 @@ function PageSingleMovie() {
                             ></iframe>
                         )}
                     </div>
+
                 </>
             )}
             {/* Could add a loading spinner here, to display while movieData is falsey */}

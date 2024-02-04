@@ -4,7 +4,15 @@
 .movie-card {
 
     position: relative;
-    max-width: 185px;
+
+    width: 185px;
+    height: 278px;
+    // border: 2px solid green;
+
+    .movie-card-image {
+        width: 185px;
+        height: 278px;
+    }
 
     .movie-card-container {
         display: none;
@@ -14,9 +22,8 @@
 .movie-card:hover {
 
     position: relative;
-    max-width: 185px;
     display: inline-block;
-    background: #fff;
+    // border: 2px solid red;
 
     img {
         opacity: 0.2;
@@ -28,18 +35,18 @@
         top: 0;
         left: 0;
         right: 0;
-        margin: .5rem;
+        padding: .5rem;
         height: 100%;
         text-align: center;
+        backdrop-filter: blur(16px);
+        z-index: 9999;
     }
 
     .title-and-release {
 
         margin: 1rem .5rem;
-        // text-align: left;
 
         .title {
-            // margin-bottom: 0;
             margin: 0;
         }
 
@@ -111,105 +118,14 @@
     }
 }
 
-.movie-card-down {
-
-    position: relative;
-    max-width: 185px;
-    display: inline-block;
-    background: #fff;
+.no-poster {
+    background-image: url(../images/no-poster.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 185px;
+    height: 278px;
 
     img {
-        opacity: 0.2;
-    }
-
-    .movie-card-container {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        margin: .5rem;
-        height: 100%;
-        text-align: center;
-    }
-
-    .title-and-release {
-
-        margin: 1rem .5rem;
-        
-
-        .title {
-            margin-bottom: 0;
-            text-align: center;
-        }
-
-        .release-date {
-            font-size: 1rem;
-            font-weight: 400;
-            text-transform: capitalize;
-            margin: 0;
-        }
-
-        .overview {
-            text-align: left;
-        }
-    }
-
-    .favorite {
-
-        position: relative;
-        top: 0;
-        right: 0;
-        margin: .5rem;
-        width: 1.5rem;
-        height: 1.5rem;
-        background-color: transparent;
-        border: 1px solid black;
-        border-radius: 50%;
-
-        svg {
-            fill: black;
-            position: absolute;
-            left: 4.5px;
-            right: 0;
-            top: 5px;
-        }
-    }
-
-    .favorited {
-        position: relative;
-
-
-        svg {
-            position: absolute;
-
-            fill: red;
-        }
-    }
-
-    .more-info {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 4rem;
-        padding: .3rem;
-        margin: 0 auto;
-        width: 5.5rem;
-        background-color: yellow;
-        border-radius: 25px;
-    }
-
-    .rating-and-favbutton {
-        position: absolute;
-        bottom: 1.2rem;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .rating {
-        font-size: 1.2rem;
-        margin: 0.5rem;
+        display: none;
     }
 }

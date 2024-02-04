@@ -1,7 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { search } from '../utilities/api';
 import { useState, useEffect } from 'react';
-import MovieCard from '../components/MovieCard';
 import MovieContainer from '../components/MovieContainer';
 
 const SearchResults = () => {
