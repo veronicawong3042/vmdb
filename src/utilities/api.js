@@ -103,4 +103,4 @@ function getMovieById(movieId){
     })
 }
 
-export {getPopularMovies, getNowPlayingMovies, getUpcomingMovies, getTopRatedMovies, getMovieById, IMAGE_URL_BASE};
+export {getPopularMovies, getNowPlayingMovies, getUpcomingMovies, getTopRatedMovies, getMovieById, IMAGE_URL_BASE,API_ENDPOINT};

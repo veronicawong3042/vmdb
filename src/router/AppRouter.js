@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {GlobalProvider} from "../context/GlobalProvider";
+import { useState } from 'react';
 import PageSingleMovie from "../pages/PageSingleMovie";
 import WorkShop from "../pages/WorkShop";
 import PageHome from "../pages/PageHome";
@@ -12,6 +13,7 @@ import PageAbout from "../pages/PageAbout";
 import Footer from "../components/Footer";
 
 function AppRouter () {
+    
     return (
     <BrowserRouter>
         <GlobalProvider>
@@ -19,7 +21,7 @@ function AppRouter () {
         <Routes>
             {/* no route set up for '/' */}
             
-            <Route path="/" element={<PageHome/>}/>
+            <Route path="/" exact element={<PageHome/>}/>
             <Route path="/favorite" element={<PageFavorite/>}/>
             <Route path="/about" element={<PageAbout/>}/>
             <Route path="/popular" element={<PopularMovies/>}/>
