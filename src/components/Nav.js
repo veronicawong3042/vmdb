@@ -4,11 +4,12 @@ const { NavLink } = require("react-router-dom");
 
 const Nav = () => (
     <nav>
+        <label className="logo">TMDB</label>
         <ul>
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
             <li><NavLink to="/favorite">Favourites</NavLink></li>
-            <li><SearchInput/></li>
+            <li><SearchInput /></li>
         </ul>
     </nav>
 )
