@@ -37,8 +37,9 @@ function MovieCard({ movieData = defaultMovieData }) {
       // onClick={() => {
       //   navigate(`/movie/${movieData.id}`);
       // }}
-      className="movie-card"
+      className="movie-card" 
     >
+      <span className="visually-hidden">{movieData.title}</span>
       <img src={imagePath} alt={movieData.title} className="movie-card-image" />
       <div className="movie-card-container">
         <div className="rating-and-favbutton">
