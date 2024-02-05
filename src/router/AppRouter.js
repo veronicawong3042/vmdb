@@ -33,7 +33,7 @@ function AppRouter() {
                         {/* <Route path="/now-playing" element={<NowPlayingMovies />} /> */}
                         {/* <Route path="/upcoming" element={<UpcomingMovies />} /> */}
                         {/* <Route path="/top-rated" element={<TopRatedMovies />} /> */}
-                        {/* <Route path="/movie/:id" element={<PageSingleMovie />} /> */}
+                        <Route path="/movie/:id" element={<PageSingleMovie />} />
                         {/* <Route path="/workshop" element={<WorkShop />} /> */}
                         <Route path="/searchresults" element={<SearchResults />} />
                     </Routes>
