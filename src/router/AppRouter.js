@@ -8,11 +8,10 @@ import PopularMovies from "../pages/PopularMovies";
 import NowPlayingMovies from "../pages/NowPlayingMovies";
 import UpcomingMovies from "../pages/UpcomingMovies";
 import TopRatedMovies from "../pages/TopRatedMovies";
-
-import Footer from "../components/Footer";
-
-
+import PageAbout from "../pages/PageAbout";
+import PageFavorite from "../pages/PageFavorite";
 import SearchResults from "../pages/SearchResults";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 function AppRouter() {
@@ -28,8 +27,8 @@ function AppRouter() {
 
                         <Route path="/" element={<PageHome />} />
 
-                        {/* <Route path="/favorite" element={<PageFavorite />} /> */}
-                        {/* <Route path="/about" element={<PageAbout />} /> */}
+                        <Route path="/favorite" element={<PageFavorite />} />
+                        <Route path="/about" element={<PageAbout />} />
                         {/* <Route path="/popular" element={<PopularMovies />} /> */}
                         {/* <Route path="/now-playing" element={<NowPlayingMovies />} /> */}
                         {/* <Route path="/upcoming" element={<UpcomingMovies />} /> */}
