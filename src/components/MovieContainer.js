@@ -3,6 +3,7 @@ import MovieCard from "./MovieCard";
 
 
 function MovieContainer ({title, moviesData}){
+
     return (
         <>
         <h2>{title}</h2>
