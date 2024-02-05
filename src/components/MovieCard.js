@@ -34,9 +34,9 @@ function MovieCard({ movieData = defaultMovieData }) {
   return (
 
     <div
-      onClick={() => {
-        navigate(`/movie/${movieData.id}`);
-      }}
+      // onClick={() => {
+      //   navigate(`/movie/${movieData.id}`);
+      // }}
       className="movie-card"
     >
       <img src={imagePath} alt={movieData.title} className="movie-card-image" />
