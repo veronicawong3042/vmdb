@@ -23,22 +23,24 @@ function AppRouter() {
             <GlobalProvider>
                 {/* Header Component */}
                 <Header />
-                <MovieNav />
-                <Routes>
-                    {/* no route set up for '/' */}
+                <div className="main-wrapper">
+                    <MovieNav />
+                    <Routes>
+                        {/* no route set up for '/' */}
 
-                    <Route path="/" element={<PageHome />} />
+                        <Route path="/" element={<PageHome />} />
 
-                    <Route path="/favorite" element={<PageFavorite />} />
-                    <Route path="/about" element={<PageAbout />} />
-                    <Route path="/popular" element={<PopularMovies />} />
-                    <Route path="/now-playing" element={<NowPlayingMovies />} />
-                    <Route path="/upcoming" element={<UpcomingMovies />} />
-                    <Route path="/top-rated" element={<TopRatedMovies />} />
-                    <Route path="/movie/:id" element={<PageSingleMovie />} />
-                    <Route path="/workshop" element={<WorkShop />} />
-                    <Route path="/SearchResults" element={<SearchResults />} />
-                </Routes>
+                        <Route path="/favorite" element={<PageFavorite />} />
+                        <Route path="/about" element={<PageAbout />} />
+                        <Route path="/popular" element={<PopularMovies />} />
+                        <Route path="/now-playing" element={<NowPlayingMovies />} />
+                        <Route path="/upcoming" element={<UpcomingMovies />} />
+                        <Route path="/top-rated" element={<TopRatedMovies />} />
+                        <Route path="/movie/:id" element={<PageSingleMovie />} />
+                        <Route path="/workshop" element={<WorkShop />} />
+                        <Route path="/SearchResults" element={<SearchResults />} />
+                    </Routes>
+                </div>
                 <Footer />
 
                 {/* Footer Component */}
