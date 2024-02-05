@@ -1,14 +1,19 @@
 // import
 @use 'variables';
 @use 'default';
+@use 'utility';
 
 // header
-
+@use 'header';
 // main
+@use 'home';
 @use 'movieCard';
 @use 'movieContainer';
 @use 'nav';
 @use 'about';
+@use 'search';
+@use 'singleMovie';
 
 // footer
 @use 'footer';
+

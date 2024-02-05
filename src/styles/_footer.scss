@@ -1,5 +1,9 @@
 // footer
+@use 'variables' as *;
 
 footer {
-    background-color: red;
+    background-color: $footer-bg;
+    color: $footer-color;
+    display: flex;
+    justify-content: center;
 }

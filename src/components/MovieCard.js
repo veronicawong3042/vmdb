@@ -1,4 +1,4 @@
-import { formatReleaseDate, truncateTitle,truncateOverview } from "../utilities/toolbelt";
+import { formatReleaseDate, truncateTitle, truncateOverview } from "../utilities/toolbelt";
 import FavouriteButton from "./FavouriteButton";
 import { useNavigate } from "react-router-dom";
 import { IMAGE_URL_BASE } from "../utilities/api";
@@ -25,21 +25,30 @@ const defaultMovieData = {
   "vote_count": 318
 }
 
+
+
 function MovieCard({ movieData = defaultMovieData }) {
-// function MovieCard() {
 
   const imagePath = `${IMAGE_URL_BASE}/w185${movieData.poster_path}`;
+
   const navigate = useNavigate();
+
+  const noPoster = movieData.poster_path === null;
+
 
   return (
 
+
     <div
-      onClick={() => {
-        navigate(`/movie/${movieData.id}`);
-      }}
-      className="movie-card"
+      // onClick={() => {
+      //   navigate(`/movie/${movieData.id}`);
+      // }}
+      className={`movie-card ${noPoster ? 'no-poster' : ''}`}
     >
+      <span className="visually-hidden">{movieData.title}</span>
       <img src={imagePath} alt={movieData.title} className="movie-card-image" />
+        
+
       <div className="movie-card-container">
         <div className="rating-and-favbutton">
           <h4 className="rating">{(movieData.vote_average).toFixed(1)}</h4>
@@ -51,15 +60,15 @@ function MovieCard({ movieData = defaultMovieData }) {
           <h4 className="release-date">{formatReleaseDate(movieData.release_date)}</h4>
           <p className="overview">{truncateOverview(movieData.overview)}</p>
         </div>
-    
-      <button
-        onClick={() => {
-          navigate(`/movie/${movieData.id}`);
-        }}
-        className="more-info"
-      >
-        More Info
-      </button>
+
+        <button
+          onClick={() => {
+            navigate(`/movie/${movieData.id}`);
+          }}
+          className="more-info"
+        >
+          More Info
+        </button>
       </div>
     </div>
 

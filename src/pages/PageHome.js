@@ -4,15 +4,22 @@ import { getNowPlayingMovies } from "../utilities/api";
 import { getUpcomingMovies } from "../utilities/api";
 import { getTopRatedMovies } from "../utilities/api";
 import MovieContainer from "../components/MovieContainer";
+import Hero from "../components/Hero";
+import CategoryButtons from "../components/CategoryButtons";
 
-function PopularMovies() {
+
+
+function PageHome() {
   const [popularMovies, setPopularMovies] = useState([]);
   const [NowPlayingMovies, setNowPlayingMovies] = useState([]);
   const [upcomingMovies, setUpcomingMovies] = useState([]);
   const [topRatedMovies, setTopRatedMovies] = useState([]);
+  const [categoryName, setCategoryName] = useState('Popular');
+
+ 
 
   useEffect(() => {
-    // Fetch Popular Movies
+    //Fetch Popular Movies
     getPopularMovies()
       .then((data) => {
         if (data.results) {
@@ -55,17 +62,30 @@ function PopularMovies() {
 
 
       
-
+    
   }, []); // Dependency array is empty to run the effect only once when the component mounts
 
+  
+
   return (
-    <main className="home-movie-cards" id="home">
-      <MovieContainer title="Popular Movies" moviesData={popularMovies} />
-      <MovieContainer title="Now Playing" moviesData={NowPlayingMovies} />
-      <MovieContainer title="Upcoming" moviesData={upcomingMovies} />
-      <MovieContainer title="Top Rated" moviesData={topRatedMovies} />
+    <main id="home">
+      <Hero />
+      <CategoryButtons categoryName={categoryName} setCategoryName={setCategoryName} />
+      {categoryName === 'Popular' && (
+        <MovieContainer title="Popular Movies" moviesData={popularMovies} /> 
+      )}
+      {categoryName === 'Now Playing' && (
+        <MovieContainer title="Now Playing" moviesData={NowPlayingMovies} />
+      )}
+      {categoryName === 'Upcoming' && (
+        <MovieContainer title="Upcoming" moviesData={upcomingMovies} />
+      )}
+      {categoryName === 'Top Rated' && (
+        <MovieContainer title="Top Rated" moviesData={topRatedMovies} />
+      )}
+      
     </main>
   );
 }
 
-export default PopularMovies;
+export default PageHome;
