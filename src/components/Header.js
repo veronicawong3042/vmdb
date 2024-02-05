@@ -7,8 +7,7 @@ function Header() {
     return (
         <header>
             <nav className='navbar'>
-                <label className="logo"><NavLink to="/">TMDB</NavLink></label>
-                
+                <label className="logo"><NavLink to="/">VMDB</NavLink></label>
                 <Nav />
             </nav>
         </header>
