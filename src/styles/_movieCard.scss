@@ -69,6 +69,7 @@
         background-color: transparent;
         border: 1px solid black;
         border-radius: 50%;
+        cursor: pointer;
 
         svg {
             fill: black;
@@ -100,6 +101,7 @@
         width: 5.5rem;
         background-color: $theme-yellow;
         border-radius: 25px;
+        cursor: pointer;
     }
 
     .overview {

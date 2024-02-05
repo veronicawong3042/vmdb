@@ -1,10 +1,12 @@
 // import
 @use 'variables';
 @use 'default';
+@use 'utility';
 
 // header
-
+@use 'header';
 // main
+@use 'home';
 @use 'movieCard';
 @use 'about';
 @use 'search';

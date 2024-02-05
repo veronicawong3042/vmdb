@@ -3,7 +3,7 @@ import useFetch from './../utilities/toolbelt';
 import { API_ENDPOINT } from './../utilities/api';
 import { Link } from 'react-router-dom';
 import { getPopularMovies } from './../utilities/api';
-
+import { useNavigate } from "react-router-dom";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -38,8 +38,11 @@ const Hero = () => {
         autoplaySpeed: 3000,
     }
 
+    const navigate = useNavigate();
+
     return (
         <section className='hero'>
+            <span className="visually-hidden">Hero banner</span>
             <Slider {...sliderSettings}>
                 {posterPaths.slice(0, 3).map((path, index) => {
                     const movie = movies[index]
@@ -50,15 +53,18 @@ const Hero = () => {
                                 <h2 className='hero-info-movie-title'>{movie.title}</h2>
                                 <p className='hero-info-movie-caption'>{truncatedText}</p>
                                 <div className='hero-info-button-container'>
-                                    <button className='hero-info-button'>
-                                        <Link
-                                            to={{
-                                                pathname: '/movieDetails',
-                                                // search: `?movieId=${movie.id}`,
-                                            }}
+                                    <button className='more-info'
+                                    onClick={() => {
+                                          navigate(`/movie/${movie.id}`);
+                                    }}
+                                        >More Info
+                                        {/* <Link
+                                            to={`{
+                                                pathname: /movie/${movie.id}
+                                            }`}
                                         >
                                             More Info
-                                        </Link>
+                                        </Link> */}
                                     </button>
                                 </div>
                             </div>
@@ -74,10 +80,6 @@ const Hero = () => {
 
         </section>
     )
-
-
-
-
 
 }
 export default Hero;
