@@ -33,7 +33,7 @@ function filterVideos(videoDataArray) {
     // site: "Youtube"
     // type: "Trailer" 
     return videoDataArray.filter((videoData) => {
-        return videoData.site === "Youtube" && videoData.type === "Trailer";
+        return videoData.site === "YouTube" && videoData.type === "Trailer";
     });
 }
 
