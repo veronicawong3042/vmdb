@@ -1,19 +1,19 @@
 function CategoryButtons ({categoryName = 'Popular', setCategoryName}){
     return(
-        <div>
-            <button onClick={()=>{
+        <div className="category-buttons">
+            <button className='popular-btn' onClick={()=>{
                 setCategoryName('Popular')
             }}>Popular</button>
             
-            <button onClick={()=>{
+            <button className='now-playing-btn' onClick={()=>{
                 setCategoryName('Now Playing')
             }}>Now Playing</button>
 
-            <button onClick={()=>{
+            <button className='upcoming-btn' onClick={()=>{
                 setCategoryName('Upcoming')
             }}>Upcoming</button>
 
-            <button onClick={()=>{
+            <button className="top-rated-btn" onClick={()=>{
                 setCategoryName('Top Rated')
             }}>Top Rated</button>
         </div>

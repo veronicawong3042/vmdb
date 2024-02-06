@@ -40,11 +40,12 @@ function MovieCard({ movieData = defaultMovieData }) {
 
 
     <div
-      onClick={() => {
-        navigate(`/movie/${movieData.id}`);
-      }}
+      // onClick={() => {
+      //   navigate(`/movie/${movieData.id}`);
+      // }}
       className={`movie-card ${noPoster ? 'no-poster' : ''}`}
     >
+      <span className="visually-hidden">{movieData.title}</span>
       <img src={imagePath} alt={movieData.title} className="movie-card-image" />
         
 
