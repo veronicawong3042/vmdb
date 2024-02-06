@@ -1,1 +1,13 @@
 // about page
+@use 'variables' as *;
+
+.about {
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        margin: 1rem auto;
+        max-width: 84rem;
+    }
+}
