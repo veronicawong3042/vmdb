@@ -1,7 +1,9 @@
 import MovieCard from "./MovieCard";
 
+
+
 function MovieContainer ({title, moviesData}){
-// function MovieContainer ({title}){
+
     return (
         <>
         <h2>{title}</h2>
@@ -10,7 +12,6 @@ function MovieContainer ({title, moviesData}){
                 {moviesData.length > 0 && 
                 moviesData.map((movieData) => {
                     return <MovieCard key={movieData.id} movieData={movieData}/>;
-                    // return <MovieCard/>;
                 })}
                 {/* optionally add a loading spinner that displays when length of moviesData array is 0  */}
             </div>

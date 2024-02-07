@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { IoSearch } from "react-icons/io5";
 
 const SearchInput = () => {
     const [searchInput, setSearchInput] = useState('');
@@ -23,7 +24,7 @@ const SearchInput = () => {
                     name='search-input'
                     placeholder="Search movies"
                 />
-                <button type="submit">Search</button>
+                <button type="submit"><IoSearch /></button>
             </form>
         </section>
     );

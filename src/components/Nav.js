@@ -1,16 +1,43 @@
+import { useState } from "react";
 import SearchInput from "./SearchInput";
 
 const { NavLink } = require("react-router-dom");
 
-const Nav = () => (
-    <nav>
-        <ul>
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/about">About</NavLink></li>
-            <li><NavLink to="/favorite">Favourites</NavLink></li>
-            <li><SearchInput/></li>
-        </ul>
-    </nav>
-)
+function Nav() {
+
+    const [openNav, setOpenNav] = useState(false);
+
+    function handleHamburger(e) {
+        e.preventDefault();
+        console.log('You opened');
+        setOpenNav(!openNav);
+    }
+
+    function handleCloseMenu(e) {
+        e.preventDefault();
+        console.log('You closed');
+        setOpenNav(false);
+    }
+
+    return (
+        <>
+            <div className={`hamburger ${openNav ? 'active' : ''}`} onClick={handleHamburger}>
+                <span className="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
+            </div>
+            <ul className={`nav-menu ${openNav ? 'active' : ''}`} onClick={handleCloseMenu}>
+                {/* <li><NavLink to="/">Home</NavLink></li> */}
+                <li><NavLink to="/about" >About</NavLink></li>
+                <li><NavLink to="/favorite" >Favourites</NavLink></li>
+                <li><SearchInput /></li>
+            </ul>
+        </>
+
+    );
+
+}
+
+
 
 export default Nav;

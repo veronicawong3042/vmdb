@@ -1,0 +1,150 @@
+// Header Style
+@use 'variables' as *;
+
+header {
+    .navbar {
+        background-color: $header-bg;
+        height: 4rem;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+    }
+
+    label.logo {
+        background-color: $theme-yellow;
+        border-radius: 4px;
+        padding: .2rem;
+        font-size: 2rem;
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    .nav-menu {
+        background-color: $header-bg;
+        text-decoration: none;
+        text-align: center;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: .3rem;
+        z-index: 1;
+
+        @media (max-width: $tablet-large) {
+            flex-direction: column;
+            position: fixed;
+            top: 4rem;
+            left: 0;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            overflow: hidden;
+            height: 0;
+
+            &.active {
+                height: auto;          
+            }
+        }
+
+        li {
+            margin: 0 .5rem;
+            line-height: 3.5rem;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+
+            a {
+                color: $header-color;
+                text-decoration: none;
+                transition: 0.5s ease;
+            }
+        }
+    }
+}
+
+.nav-menu li a:hover {
+    color: $theme-yellow;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+
+    @media (min-width: $tablet-large) {
+        display: none;
+    }
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.navbar {
+    overflow: hidden;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+.search-form {
+    width: fit-content;
+    line-height: 0;
+    border: 1px solid $theme-yellow;
+    border-radius: 1.2rem;
+    padding: .2rem;
+    margin: 1rem 0 1.5rem 0 ;
+
+    @media (min-width: $tablet-large) {
+        margin: 1rem 0;
+    }
+
+    input {
+        background-color: $header-bg;
+        border: transparent;
+        margin: .2rem;
+        margin-left: .5rem;
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    input:focus {
+        outline: none;
+        border-color: transparent;
+    }
+
+    input::placeholder {
+        color: grey;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        color: $theme-yellow;
+        cursor: pointer;
+
+        svg {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
+}

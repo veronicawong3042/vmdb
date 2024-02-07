@@ -1,7 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { search } from '../utilities/api';
 import { useState, useEffect } from 'react';
-import MovieCard from '../components/MovieCard';
 import MovieContainer from '../components/MovieContainer';
 
 const SearchResults = () => {
@@ -18,7 +17,7 @@ const SearchResults = () => {
               console.log('Data from search:', data);
             //   debugger;
               setMovies(data.results);
-              console.log(movies)
+              console.log(data.results)
             })
             .catch(error => {
               console.error('Error from search:', error);
@@ -29,7 +28,7 @@ const SearchResults = () => {
       if (movies.length > 0) {
         return (
             <div>
-                <h2>Search results for "{searchQuery}" :</h2>
+                <h2 className="search-results">Search results for "{searchQuery}" :</h2>
                 <section>
                    <MovieContainer moviesData={movies}/>
                 </section>
