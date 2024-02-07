@@ -4,52 +4,63 @@
 .movie-card {
 
     position: relative;
-
     width: 185px;
     height: 278px;
     // border: 2px solid green;
 
     .movie-card-image {
+        // position: relative; 
         width: 185px;
         height: 278px;
+        margin: 0;
     }
 
     .movie-card-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+    
         display: none;
     }
 }
 
 .movie-card:hover {
 
-    position: relative;
-    display: inline-block;
+    
+    // display: inline-block;
     // border: 2px solid red;
 
-    img {
+    .movie-card-image {
+        // position: relative;
         opacity: 0.2;
     }
 
     .movie-card-container {
         display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding: .5rem;
-        height: 100%;
-        text-align: center;
-        backdrop-filter: blur(16px);
-        z-index: 9999;
     }
+
+    
+}
+
+.movie-card-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: .5rem;
+    height: 278px;
+    text-align: center;
+    backdrop-filter: blur(16px);
+    z-index: 9999;
 
     .title-and-release {
 
         margin: 1rem .5rem;
-
+    
         .title {
             margin: 0;
         }
-
+    
         .release-date {
             font-size: 1rem;
             font-weight: 400;
@@ -57,9 +68,9 @@
             margin: 0;
         }
     }
-
+    
     .favorite {
-
+    
         position: relative;
         top: 0;
         right: 0;
@@ -70,7 +81,7 @@
         border: 1px solid black;
         border-radius: 50%;
         cursor: pointer;
-
+    
         svg {
             fill: black;
             position: absolute;
@@ -79,46 +90,48 @@
             top: 5px;
         }
     }
-
+    
     .favorited {
         position: relative;
-
-
+    
+    
         svg {
             position: absolute;
-
+    
             fill: red;
         }
     }
-
+    
     .more-info {
         position: absolute;
         left: 0;
         right: 0;
         bottom: 2rem;
         padding: .3rem;
-        margin: 0 auto;
+        margin: 0rem auto;
         width: 5.5rem;
         background-color: $theme-yellow;
         border-radius: 25px;
         cursor: pointer;
     }
-
+    
     .overview {
         text-align: left;
     }
-
+    
     .rating-and-favbutton {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-
+    
     .rating {
         font-size: 1.2rem;
         margin: 0.5rem;
     }
 }
+
+
 
 .no-poster {
     background-image: url(../images/no-poster.jpg);
