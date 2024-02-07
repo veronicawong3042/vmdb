@@ -25,7 +25,7 @@ function NowPlayingMovies() {
 //   .catch(err => console.error(err));
 
   return (
-    <main id="home">
+    <main className="home-movie-cards" id="home">
       <MovieContainer title="Now Playing Movies" moviesData={nowPlayingMovies} />
     </main>
   );

@@ -7,7 +7,7 @@ function PageFavorite() {
 
   return (
     <div>
-      <h1>Favorites</h1>
+      <h1 className="fav-heading">Favorites</h1>
       {favorites.length > 0 ? (
         <div>
           {favorites.map((favorite) => (
