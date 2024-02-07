@@ -26,10 +26,10 @@ function Nav() {
                 <span className="bar"></span>
                 <span className="bar"></span>
             </div>
-            <ul className={`nav-menu ${openNav ? 'active' : ''}`} onClick={handleCloseMenu}>
+            <ul className={`nav-menu ${openNav ? 'active' : ''}`} >
                 {/* <li><NavLink to="/">Home</NavLink></li> */}
-                <li><NavLink to="/about" >About</NavLink></li>
-                <li><NavLink to="/favorite" >Favourites</NavLink></li>
+                <li onClick={handleCloseMenu}><NavLink to="/about" >About</NavLink></li>
+                <li onClick={handleCloseMenu}><NavLink to="/favorite" >Favourites</NavLink></li>
                 <li><SearchInput /></li>
             </ul>
         </>
