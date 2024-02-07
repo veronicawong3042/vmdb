@@ -28,7 +28,7 @@ const SearchResults = () => {
       if (movies.length > 0) {
         return (
             <div>
-                <h2>Search results for "{searchQuery}" :</h2>
+                <h2 className="search-results">Search results for "{searchQuery}" :</h2>
                 <section>
                    <MovieContainer moviesData={movies}/>
                 </section>
