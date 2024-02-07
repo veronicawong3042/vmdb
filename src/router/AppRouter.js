@@ -34,7 +34,7 @@ function AppRouter() {
                         {/* <Route path="/upcoming" element={<UpcomingMovies />} /> */}
                         {/* <Route path="/top-rated" element={<TopRatedMovies />} /> */}
                         <Route path="/movie/:id" element={<PageSingleMovie />} />
-                        {/* <Route path="/workshop" element={<WorkShop />} /> */}
+                        <Route path="/workshop" element={<WorkShop />} />
                         <Route path="/searchresults" element={<SearchResults />} />
                     </Routes>
                 </div>
