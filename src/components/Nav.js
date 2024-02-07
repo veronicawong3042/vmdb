@@ -9,8 +9,14 @@ function Nav() {
 
     function handleHamburger(e) {
         e.preventDefault();
-        console.log('You clicked');
+        console.log('You opened');
         setOpenNav(!openNav);
+    }
+
+    function handleCloseMenu(e) {
+        e.preventDefault();
+        console.log('You closed');
+        setOpenNav(false);
     }
 
     return (
@@ -20,10 +26,10 @@ function Nav() {
                 <span className="bar"></span>
                 <span className="bar"></span>
             </div>
-            <ul className={`nav-menu ${openNav ? 'active' : ''}`}>
+            <ul className={`nav-menu ${openNav ? 'active' : ''}`} onClick={handleCloseMenu}>
                 {/* <li><NavLink to="/">Home</NavLink></li> */}
-                <li><NavLink to="/about">About</NavLink></li>
-                <li><NavLink to="/favorite">Favourites</NavLink></li>
+                <li><NavLink to="/about" >About</NavLink></li>
+                <li><NavLink to="/favorite" >Favourites</NavLink></li>
                 <li><SearchInput /></li>
             </ul>
         </>
