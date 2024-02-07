@@ -10,7 +10,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .main-wrapper {
-    margin: 1rem;
+    margin: 0 auto;
+    min-height: 100vh;
+    
+    // @media (width > $tablet-large) {
+    //     margin: 0 auto;
+    // }
 }
 
 a:hover,

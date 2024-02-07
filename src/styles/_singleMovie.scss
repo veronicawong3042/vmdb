@@ -6,46 +6,100 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 1rem;
-}
-
-.movie-card-image{
     margin: 1rem;
 }
+
+.single-movie-banner {
+    // margin: 1rem auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.backdrop-image{
+    display: none;
+    object-fit: cover;
+    // max-width: 1920px;
+    height: 400px;
+}
+
+.movie-page .movie-card-image{
+    max-width: 320px;
+    width: 100%;
+}
 .movie-title{
+    max-width: 31.25rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .movie-title h1{
     margin: 1rem;
+    margin-left: 0;
+    flex-basis: 80%;
+}
+// .favorite{
+//     margin: 1rem;
+//     border-radius: 1rem;
+//     padding: 0.40rem;
+//     background-color: white;
+// }
+
+.favorite {
     
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: .5rem;
+    width: 1.6rem;
+    height: 1.5rem;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+
+    svg {
+        fill: black;
+        position: absolute;
+        left: 4.5px;
+        right: 0;
+        top: 5px;
+    }
 }
-.favorite{
-    margin: 1rem;
-    border-radius: 1rem;
-    padding: 0.40rem;
-    background-color: white;
+
+.favorited {
+    position: relative;
+
+
+    svg {
+        position: absolute;
+
+        fill: red;
+    }
 }
+
 .movie-details{
-    align-items: inline;
-    
+    // align-items: inline;
+    margin: 1rem;
+    max-width: 50rem;
 }
 
 .genre{
     border: 1.5px solid $theme-yellow;
     border-radius: 1rem;
-    margin: 0.25rem;
-    padding: 0.35rem;
+    margin: 0.5rem ;
+    margin-left: 0;
+    padding: 0.35rem 0.7rem;
 
 }
 .genre-details{
-    padding: 0.75rem;
-    margin-left: -1rem;
+    margin: 0.75rem 0;
+    text-align: left;
     
 }
 .overview-details{
-    padding: 0.75rem;
-    margin-left: -1rem;
+    margin: 0.75rem 0;
+    text-align: left;
 }
 
 .watch-trailer{
@@ -58,10 +112,8 @@
     
     
 }
-.backdrop-image{
-    display: none;
-}
-@media screen and (min-width: 500px){
+
+@media screen and (min-width: $tablet-small){
     .movie-details{
         display: flex;
         align-items: center;
@@ -74,16 +126,71 @@
     .overview-details h3{
         text-align: center;
     }
+
+    .movie-page .movie-card-image{
+        width: 50%;
+    }
     
 }
 
 
-@media screen and (min-width: 710px){
+@media screen and (min-width: $tablet-large){
+
+    .movie-page{
+        margin: 0 auto;
+    }
+    .single-movie-banner{
+        // position: static;
+    }
+    .backdrop-image{
+        position: relative;
+        display: block;
+        opacity: .75;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+        
+    }
+    
+    .movie-page .movie-card-image{
+        // display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        // bottom: -20%;
+        top: 10%;
+        z-index: 2;
+        margin: 0 auto;
+        width: 40%;
+        
+    }
+    .movie-title{
+        margin-top: 8.5rem;
+    }
+    .movie-details{
+        margin-top: 1rem;
+    }
+
+   
+}
+@media (width > $desktop-small) {
+    .movie-page .movie-card-image{
+       
+    }
+
+    .movie-title{
+        margin-top: 12rem;
+    }
+
+}
+
+@media (width > $desktop-large) {
     .single-movie-banner{
         position: relative;
     }
     .backdrop-image{
-        display: inline;
+        display: block;
         opacity: .75;
         left: 0;
         top: 0;
@@ -92,13 +199,15 @@
         
     }
     
-    .movie-card-image{
+    .movie-page .movie-card-image{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: -20%;
+        // bottom: -20%;
+        top: 15%;
         z-index: 2;
         margin: 0 auto;
+        
         
     }
     .movie-title{
@@ -107,19 +216,18 @@
     .movie-details{
         margin-top: 1rem;
     }
-
-   
+    
 }
-@media screen and (min-width: 1920px){
-    .single-movie-banner{
-        width: 100%;
-    }
-    .movie-title{
-        margin-top: 15rem;
-    }
-    .movie-details{
-        width: 100%;
-    }
-}
+// @media screen and (min-width: 1920px){
+//     .single-movie-banner{
+//         width: 100%;
+//     }
+//     // .movie-title{
+//     //     margin-top: 15rem;
+//     // }
+//     .movie-details{
+//         width: 100%;
+//     }
+// }
 
 
