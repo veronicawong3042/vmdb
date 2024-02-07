@@ -17,7 +17,7 @@ function FavouriteButton({ movieData }) {
       addToFavorites(movieData);
     }
   }
-
+    
   return (
     <button
       onClick={handleFavorite}

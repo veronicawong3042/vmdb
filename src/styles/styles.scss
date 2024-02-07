@@ -5,11 +5,15 @@
 
 // header
 @use 'header';
+@use 'hero';
+@use 'nav';
 // main
 @use 'home';
 @use 'movieCard';
+@use 'movieContainer';
 @use 'about';
 @use 'singleMovie';
+@use 'favorite';
 @use 'search';
 
 // footer

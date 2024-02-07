@@ -25,9 +25,8 @@
 }
 
 .movie-card:hover {
-
-    
-    // display: inline-block;
+    position: relative;
+    display: inline-block;
     // border: 2px solid red;
 
     .movie-card-image {
