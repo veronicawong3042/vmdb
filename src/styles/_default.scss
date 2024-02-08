@@ -30,4 +30,7 @@ a:active{
 
 p{
     line-height: 1.5rem;
+    @media (min-width: 77.88em) {
+        line-height: 2rem;
+    }
 }
