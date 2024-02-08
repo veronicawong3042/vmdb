@@ -2,12 +2,34 @@
 @use 'variables' as *;
 
 .about {
+    position: relative;
+    margin: 1rem;
+
     h1 {
+        margin: 3rem;
         text-align: center;
     }
 
+    .about-bg-icon {
+        width: 100%;
+        text-align: center;
+        z-index: -1;
+
+        svg {
+            height: 12rem;
+            width: 12rem;
+            margin: 0 auto;
+            fill: $theme-yellow;
+            opacity: 0.3;
+        }
+    }
+
     p {
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        right: 0;
         margin: 1rem auto;
-        max-width: 84rem;
+        max-width: 50rem;
     }
 }

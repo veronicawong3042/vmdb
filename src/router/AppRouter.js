@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { GlobalProvider } from "../context/GlobalProvider";
+import  GlobalProvider  from "../context/GlobalProvider";
 import { useState } from 'react';
 import PageSingleMovie from "../pages/PageSingleMovie";
 import WorkShop from "../pages/WorkShop";
@@ -34,7 +34,7 @@ function AppRouter() {
                         {/* <Route path="/upcoming" element={<UpcomingMovies />} /> */}
                         {/* <Route path="/top-rated" element={<TopRatedMovies />} /> */}
                         <Route path="/movie/:id" element={<PageSingleMovie />} />
-                        {/* <Route path="/workshop" element={<WorkShop />} /> */}
+                        <Route path="/workshop" element={<WorkShop />} />
                         <Route path="/searchresults" element={<SearchResults />} />
                     </Routes>
                 </div>
