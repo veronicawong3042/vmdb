@@ -15,7 +15,7 @@ header {
 
     label.logo {
         background-color: $theme-yellow;
-        border-radius: 4px;
+        border-radius: 10px;
         padding: .2rem;
         font-size: 2rem;
 
@@ -152,5 +152,21 @@ header {
 @media (min-width: $desktop-large) {
     .navbar {
         padding: 0.75rem;
+
+        .logo{
+            margin: 0.75rem;
+        }
     }
+
+    header{
+        .nav-menu{
+            gap: 1.75rem;
+        }
+    
+        label.logo {
+            padding: .5rem;
+            font-size: 2.25rem;
+        }
+    }
+    
 }

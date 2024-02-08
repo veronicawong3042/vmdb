@@ -6,7 +6,7 @@
   grid-template-columns: repeat(4, 25%); 
   // margin-top: 1rem;
   margin: 0.5rem;
-
+  
   button{
     background-color: transparent;
     display: grid;
@@ -18,21 +18,12 @@
     justify-content: center;
     font-weight: bold;
     background-color: $theme-yellow;
+
+    p{
+      line-height: 1rem;
+    }
   }
 
-//   a {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     background-color: $theme-yellow;
-//     width: 100%;
-//     margin: 0.5rem 0 0.5rem 0;
-//     text-decoration: none;
-//     color: black;
-//     font-size: 0.75rem;
-//     text-transform: uppercase;
-//     font-weight: bold;
-//   }
 
   svg {
     font-size: 2rem;
@@ -119,10 +110,19 @@
 @media(min-width: $desktop-large){
   .movie-categories{
     max-width: 800px;
+    border: 1.5px black solid;
     margin-top: 1.5rem;
 
+    .slider-button.active {
+      border: 1.5px black solid;
+    }
     button{
       font-size: 1rem;
+    }
+
+    p{
+      font-size: 1.2rem;
+
     }
   }
   
