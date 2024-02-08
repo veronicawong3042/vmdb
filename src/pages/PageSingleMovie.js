@@ -51,14 +51,16 @@ function PageSingleMovie() {
                     </div>
 
                     <div className="movie-details">
-                        <div className="release-date">
-                            <p>Released on: {formatReleaseDate(movieData.release_date)}</p>
-                        </div>
-                        <div className="rating">
-                            <p>Rating: {movieData.vote_average ? movieData.vote_average.toFixed(1) : 'N/A'}</p>
-                        </div>
-                        <div className="length">
-                            <p>Length: {formatTime(movieData.runtime)}</p>
+                        <div className="release-rating-length">
+                            <div className="release-date">
+                                <p>Released on: {formatReleaseDate(movieData.release_date)}</p>
+                            </div>
+                            <div className="rating">
+                                <p>Rating: {movieData.vote_average ? movieData.vote_average.toFixed(1) : 'N/A'}</p>
+                            </div>
+                            <div className="length">
+                                <p>Length: {formatTime(movieData.runtime)}</p>
+                            </div>
                         </div>
 
                         <div className="genre-details">

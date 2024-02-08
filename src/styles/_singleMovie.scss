@@ -1,6 +1,12 @@
 // Single Movie Page
 @use 'variables' as *;
+a:hover,
+a:focus,
+a:active{
 
+    color: $theme-yellow;
+    background-color: black;
+}
 
 .movie-page{
     display: flex;
@@ -36,7 +42,7 @@
 }
 .movie-title h1{
     margin: 1rem;
-    margin-left: 0;
+    // margin-left: 0;
     flex-basis: 80%;
 }
 // .favorite{
@@ -104,9 +110,12 @@
     text-align: left;
     
 }
+.genre-details h3{
+    text-align: center;
+}
 .overview-details{
     margin: 0.75rem 0;
-    text-align: left;
+    text-align: center;
 }
 
 .watch-trailer{
@@ -125,6 +134,11 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+       
+    }
+    .movie-details p{
+        text-align: left;
+        margin: 0.50rem;
     }
    
     .genre-details h3{
@@ -183,11 +197,12 @@
         
     }
     .movie-title{
-        margin-top: 8.5rem;
+        margin-top: 3.95rem;
     }
     .movie-details{
-        margin-top: 1rem;
+        margin-top: 0.75rem;
     }
+
 
    
 }
@@ -197,7 +212,7 @@
     }
 
     .movie-title{
-        margin-top: 12rem;
+        margin-top: 6rem;
     }
 
 }
@@ -228,10 +243,10 @@
         
     }
     .movie-title{
-        margin-top: 10rem;
+        margin-top: 8.50rem;
     }
     .movie-details{
-        margin-top: 1rem;
+        margin-top: 0.65rem;
     }
     
 }
