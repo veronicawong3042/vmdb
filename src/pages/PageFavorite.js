@@ -7,9 +7,9 @@ function PageFavorite() {
 
   return (
     <div>
-      <h1 className="fav-heading">Favorites</h1>
+      <h1 className="fav-heading">Favourites</h1>
       {favorites.length > 0 ? (
-        <div>
+        <div className="fav-movies-container">
           {favorites.map((favorite) => (
             <div key={favorite.id}>
               <MovieCard movieData={favorite} />

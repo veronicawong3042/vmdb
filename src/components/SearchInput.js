@@ -12,7 +12,7 @@ const SearchInput = () => {
 
         setSearchInput(searchValue);
         navigate(`/SearchResults?query=${searchValue}`);
-        e.target.reset()
+        e.target.reset();
     }
 
     return (

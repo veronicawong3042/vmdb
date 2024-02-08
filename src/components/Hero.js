@@ -1,22 +1,17 @@
 import { useState, useEffect } from 'react';
-import useFetch from './../utilities/toolbelt';
-import { API_ENDPOINT } from './../utilities/api';
-import { Link } from 'react-router-dom';
-import { getPopularMovies } from './../utilities/api';
 import { useNavigate } from "react-router-dom";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { getPopularMovies } from './../utilities/api';
 import { IMAGE_URL_BASE } from "../utilities/api";
 
 const Hero = () => {
-    // const { get } = useFetch('https://api.themoviedb.org/3/');
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
         getPopularMovies().then((data) => {
             setMovies(data.results);
-            console.log(data.results);
         });
     }, []);
 
@@ -30,6 +25,8 @@ const Hero = () => {
         infinite: true,
         autoplay: true,
         autoplaySpeed: 3000,
+        prevArrow: <CustomPrevArrow />,
+        nextArrow: <CustomNextArrow />
     }
 
     const navigate = useNavigate();
@@ -45,20 +42,12 @@ const Hero = () => {
                         <div key={`backdrop-${index}`} className='hero-image-container'>
                             <div className='hero-info'>
                                 <h2 className='hero-info-movie-title'>{movie.title}</h2>
-                                {/* <p className='hero-info-movie-caption'>{truncatedText}</p> */}
                                 <div className='hero-info-button-container'>
                                     <button className='more-info'
-                                    onClick={() => {
-                                          navigate(`/movie/${movie.id}`);
-                                    }}
-                                        >More Info
-                                        {/* <Link
-                                            to={`{
-                                                pathname: /movie/${movie.id}
-                                            }`}
-                                        >
-                                            More Info
-                                        </Link> */}
+                                        onClick={() => {
+                                            navigate(`/movie/${movie.id}`);
+                                        }}
+                                    >More Info
                                     </button>
                                 </div>
                             </div>
@@ -76,4 +65,24 @@ const Hero = () => {
     )
 
 }
+
+const CustomPrevArrow = (props) => {
+    const { onClick } = props;
+    return (
+        <div className="custom-prev-arrow" onClick={onClick}>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>        
+        </div>
+    );
+}
+
+const CustomNextArrow = (props) => {
+    const { onClick } = props;
+    return (
+        <div className="custom-next-arrow" onClick={onClick}>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="24" height="24" viewBox="0 0 24 24"><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"/></svg>        
+        </div>
+    );
+}
+
+
 export default Hero;
