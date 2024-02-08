@@ -3,7 +3,7 @@ import { getYear } from '../utilities/toolbelt';
 function Footer ({copyright = getYear() ,author}) {
     return (
         <footer>
-            <p>Copyright &copy; {copyright} {author}</p>
+            <p>VMDB &copy; {copyright} {author}</p>
         </footer>
     );
 }
