@@ -4,8 +4,8 @@
 .movie-card {
 
     position: relative;
-    width: 185px;
-    height: 278px;
+    // width: 185px;
+    // height: 278px;
     // border: 2px solid green;
 
     .movie-card-image {
@@ -63,6 +63,23 @@
             font-weight: 400;
             text-transform: capitalize;
             margin: 0;
+        }
+
+        @media (min-width:77.88em) {
+            
+            .movie-card-container{
+                width: 300px;
+                height: auto;
+            
+                .title-and-release{
+                    .title{
+                        font-size: 2rem;
+                    }
+                    // .release-date{
+                    //     font-size: 2rem;
+                    // }
+                }
+            }
         }
     }
     
@@ -142,3 +159,11 @@
     }
 }
 
+@media (min-width: 77.88em){
+    .movie-card .movie-card-image{
+        width: 300px;
+        height: auto;
+    }
+
+    
+}
