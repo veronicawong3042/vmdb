@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { GlobalProvider } from "../context/GlobalProvider";
+import  GlobalProvider  from "../context/GlobalProvider";
 import { useState } from 'react';
 import PageSingleMovie from "../pages/PageSingleMovie";
 import WorkShop from "../pages/WorkShop";

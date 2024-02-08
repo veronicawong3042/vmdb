@@ -6,9 +6,10 @@ const SearchInput = () => {
     const [searchInput, setSearchInput] = useState('');
     const navigate = useNavigate();
 
+
     function handleSearch(e) {
         e.preventDefault();
-        const searchValue = e.target.elements['search-input'].value;
+        const searchValue = e.target.elements['search-input'].value.trim();
 
         setSearchInput(searchValue);
         navigate(`/SearchResults?query=${searchValue}`);

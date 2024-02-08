@@ -30,7 +30,7 @@ function PageSingleMovie() {
     }, [id]);
 
     console.log(movieData);
-    const posterPath = `${IMAGE_URL_BASE}/w185${movieData.poster_path}`;
+    const posterPath = `${IMAGE_URL_BASE}/w500${movieData.poster_path}`;
     const backdropPath = `${IMAGE_URL_BASE}/w1280${movieData.backdrop_path}`;
     const noPoster = movieData.poster_path === null;
     const noBackdrop = movieData.backdrop_path === null;
@@ -43,6 +43,8 @@ function PageSingleMovie() {
                         <img src={backdropPath} alt={movieData.title} className='backdrop-image' />
                         <img src={posterPath} alt={movieData.title} className='movie-card-image' />
                     </div>
+                     {/* <img src={posterPath} alt={movieData.title} className='movie-card-image' /> */}
+                    
                     <div className="movie-title">
                         <h1>{movieData.title}</h1>
                         <FavouriteButton movieData={movieData} />

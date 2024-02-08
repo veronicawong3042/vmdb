@@ -37,7 +37,7 @@ const SearchResults = () => {
     } else {
         return (
             <div>
-                <h2>We couldn't find any movies matching "{searchQuery}"</h2>
+                <h2>We couldn't find any movies matching {searchQuery.trim() !== '' ? `${searchQuery}` : ''}</h2>
             </div>
         );
     }
