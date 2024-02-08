@@ -30,11 +30,11 @@ import {useState} from 'react';
 // If the content is over 100 characters, then output the first 100 characters; 
 // otherwise, output all the content
 function truncateOverview(input) {
-    return input.length > 60 ? `${input.substring(0, 55)}...` : input;
+    return input.length > 55 ? `${input.substring(0, 40)}...` : input;
 }
 
 function truncateTitle(input) {
-    return input.length > 20 ? `${input.substring(0, 20)}...` : input;
+    return input.length > 18 ? `${input.substring(0, 18)}...` : input;
 }
 
 // get current year
