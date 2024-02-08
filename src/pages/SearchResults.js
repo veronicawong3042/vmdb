@@ -29,7 +29,7 @@ const SearchResults = () => {
         return (
             <div>
                 <h2 className="search-results">Search results for "{searchQuery}" :</h2>
-                <section>
+                <section className='search-results-posters'>
                    <MovieContainer moviesData={movies}/>
                 </section>
             </div>

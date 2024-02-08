@@ -17,3 +17,9 @@
         width: 100%;
     }
 }
+
+@media (min-width: $desktop-small){
+    .search-results-posters{
+        margin: 0 2rem 0 2rem;
+    }
+}
