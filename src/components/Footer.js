@@ -1,6 +1,6 @@
 import { getYear } from '../utilities/toolbelt';
 
-function Footer ({copyright = getYear() ,author = 'Me'}) {
+function Footer ({copyright = getYear() ,author}) {
     return (
         <footer>
             <p>Copyright &copy; {copyright} {author}</p>
