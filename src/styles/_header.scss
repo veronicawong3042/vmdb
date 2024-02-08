@@ -148,3 +148,9 @@ header {
         }
     }
 }
+
+@media (min-width: $desktop-large) {
+    .navbar {
+        padding: 0.75rem;
+    }
+}
