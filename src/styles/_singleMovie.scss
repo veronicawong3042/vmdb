@@ -1,9 +1,9 @@
 // Single Movie Page
 @use 'variables' as *;
+
 a:hover,
 a:focus,
 a:active{
-
     color: $theme-yellow;
     background-color: black;
 }
