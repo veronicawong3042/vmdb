@@ -36,7 +36,7 @@ header {
         gap: .3rem;
         z-index: 1;
 
-        @media (max-width: $tablet-large) {
+        @media (width < $tablet-large) {
             flex-direction: column;
             position: fixed;
             top: 4rem;
@@ -75,7 +75,7 @@ header {
     display: block;
     cursor: pointer;
 
-    @media (min-width: $tablet-large) {
+    @media (width >= $tablet-large) {
         display: none;
     }
 }
