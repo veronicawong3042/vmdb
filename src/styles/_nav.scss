@@ -4,7 +4,8 @@
 .movie-categories {
   display: grid;
   grid-template-columns: repeat(4, 25%); 
-  margin-top: 2rem;
+  // margin-top: 1rem;
+  margin: 0.5rem;
 
   button{
     background-color: transparent;
@@ -87,9 +88,10 @@
     .movie-categories {
         border: 1px black solid;
         border-radius: 2rem;
-        max-width: 600px;
+        max-width: 450px;
+        // margin: 1rem;
         margin: 0 auto;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     .slider-button{
@@ -108,4 +110,21 @@
       }
 }
 
+@media (min-width: $tablet-large) {
+  .movie-categories{
+    max-width: 600px;
+  }
+}
 
+@media(min-width: $desktop-large){
+  .movie-categories{
+    max-width: 800px;
+    margin-top: 1.5rem;
+
+    button{
+      font-size: 1rem;
+    }
+  }
+  
+ 
+}

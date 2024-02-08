@@ -7,13 +7,18 @@
 // $tablet-large: 44.375em; // 710px
 // $desktop-small: 48.125em; // 770px
 
+
+.movies-container{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
 .movie-cards{
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
     justify-items: center;
-
 
     img {
         width: 140px;
@@ -32,6 +37,15 @@
             width: 185px;
             height: auto;
         }
+
     }
 
+}
+
+@media (min-width: 63.75em) {
+    .movies-container {
+        margin: 0 0.5rem 0 0.5rem;
+        margin-bottom: 1rem;
+        margin-top: 1.5rem;
+    }
 }

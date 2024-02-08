@@ -32,6 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    // text-align: center;
 }
 .movie-title h1{
     margin: 1rem;
@@ -85,7 +86,7 @@
 }
 
 .genre{
-    border: 1.5px solid $theme-yellow;
+    border: 2px solid $theme-yellow;
     border-radius: 1rem;
     margin: 0.5rem ;
     margin-left: 0;

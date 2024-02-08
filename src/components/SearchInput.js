@@ -23,7 +23,7 @@ const SearchInput = () => {
                     type="text"
                     id='search-input'
                     name='search-input'
-                    placeholder="Search movies"
+                    // placeholder="Search movies"
                 />
                 <button type="submit"><IoSearch /></button>
             </form>
