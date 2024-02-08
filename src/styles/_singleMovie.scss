@@ -110,13 +110,13 @@
 
 .watch-trailer{
     background-color: $theme-yellow;
-    border: 1px solid;
+    border: 2px solid;
     border-radius: 1rem;
     text-decoration: none;
     color: black;
     padding: 0.75rem;
-    
-    
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 @media screen and (min-width: $tablet-small){
@@ -133,9 +133,19 @@
         text-align: center;
     }
 
+    .overview-details p{
+        margin: 0 2rem 0 2rem;
+    }
+
     .movie-page .movie-card-image{
         width: 50%;
     }
+
+    .watch-trailer{
+        margin-bottom: 3rem;
+    }
+
+
     
 }
 
