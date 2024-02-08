@@ -92,6 +92,12 @@
     padding: 0.35rem 0.7rem;
 
 }
+
+.genres{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .genre-details{
     margin: 0.75rem 0;
     text-align: left;
