@@ -165,6 +165,10 @@ header {
     header{
         .nav-menu{
             gap: 1.75rem;
+
+            li a {
+                font-size: 1.25rem;
+            }
         }
     
         label.logo {
@@ -173,4 +177,11 @@ header {
         }
     }
     
+}
+
+@media (min-width: 90em) {
+    header .nav-menu li a{
+        font-size: 1.5rem;
+
+    }
 }
