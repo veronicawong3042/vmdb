@@ -61,14 +61,14 @@ function MovieCard({ movieData = defaultMovieData }) {
           <p className="overview">{truncateOverview(movieData.overview)}</p>
         </div>
 
-        <button
+        <div
           onClick={() => {
             navigate(`/movie/${movieData.id}`);
           }}
           className="more-info"
         >
           More Info
-        </button>
+        </div>
       </div>
     </div>
 
