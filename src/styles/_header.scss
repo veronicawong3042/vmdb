@@ -24,9 +24,9 @@ header {
             text-decoration: none;
         }
 
-        // a:active, a:focus, a:hover{
-        //     text-decoration: 1px black underline;
-        // }
+        a:active, a:focus, a:hover{
+            border-bottom: 3px solid black;
+        }
     }
 
     .nav-menu {
@@ -165,6 +165,10 @@ header {
     header{
         .nav-menu{
             gap: 1.75rem;
+
+            li a {
+                font-size: 1.25rem;
+            }
         }
     
         label.logo {
@@ -173,4 +177,11 @@ header {
         }
     }
     
+}
+
+@media (min-width: 90em) {
+    header .nav-menu li a{
+        font-size: 1.5rem;
+
+    }
 }

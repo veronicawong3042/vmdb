@@ -1,9 +1,9 @@
 // Single Movie Page
 @use 'variables' as *;
 
-a:hover,
-a:focus,
-a:active{
+.watch-trailer:hover,
+.watch-trailer:focus,
+.watch-trailer:active{
     color: $theme-yellow;
     background-color: black;
 }
