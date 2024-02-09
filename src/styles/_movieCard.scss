@@ -47,7 +47,7 @@
     padding: .5rem;
     height: 260px;
     text-align: center;
-    backdrop-filter: blur(16px);
+    // backdrop-filter: blur(16px);
     z-index: 9999;
 
 
@@ -67,7 +67,7 @@
             margin: 0;
         }
 
-        @media (min-width:77.88em) {
+        @media (min-width:87.5em) {
 
 
             .title {
@@ -162,7 +162,7 @@
     }
 }
 
-@media (min-width: 77.88em) {
+@media (min-width: 87.5em) {
     .movie-card .movie-card-image {
         width: 300px;
         height: auto;
@@ -170,7 +170,7 @@
 
 
     .movie-card-container {
-        width: 300px;
+        // width: 300px;
         height: 100%;
     }
 
