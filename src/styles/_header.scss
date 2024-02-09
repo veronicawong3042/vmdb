@@ -18,9 +18,17 @@ header {
         border-radius: 4px;
         padding: .2rem;
         font-size: 2rem;
-
-        a {
+        
+        a{
             color: black;
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:focus,
+        a:active{
+            color: $theme-yellow;
+            background-color: black;
             text-decoration: none;
         }
     }
