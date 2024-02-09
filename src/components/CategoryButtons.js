@@ -11,7 +11,7 @@ function CategoryButtons ({categoryName = 'Popular', setCategoryName}){
     const handleButtonClick = (buttonName) => {
         setActiveButton(buttonName);
       };
-
+  
     return(
         <div className="movie-categories">
             <button className={`slider-button ${activeButton === "popular" ? "active" : ""}`} 
