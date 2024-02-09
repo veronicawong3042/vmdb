@@ -7,7 +7,7 @@
   // margin-top: 1rem;
   margin: 0.5rem;
   
-  button{
+  .slider-button{
     background-color: transparent;
     display: grid;
     grid-template-rows: auto;
@@ -52,7 +52,7 @@
           display: none;
       }
 
-      button{
+      .slider-button{
         background: transparent;
       }
 
@@ -117,7 +117,7 @@
     .slider-button.active {
       border: 1.5px black solid;
     }
-    button{
+    .slider-button{
       font-size: 1rem;
       p{
         font-size: 1.2rem;
