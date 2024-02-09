@@ -28,21 +28,26 @@ header {
             color: black;
             text-decoration: none;
         }
+    }
 
-        a:hover {
-            background-color: black;
+
+    label.logo:active,
+    label.logo:hover {
+        background-color: black;
+        border: 2px solid $theme-yellow;
+        a {
+            background-color: transparent;
             color: $theme-yellow;
-            border-radius: 10px;
         }
+    }
 
-        a:focus {
-            border-radius: 10px;
-            color: $theme-yellow;
-        }
+    label.logo:focus {
+        color: $theme-yellow;
+    }
 
-        a:active {
-            color: black;
-        }
+    label.logo a:focus {
+        color: $theme-yellow;
+        border-radius: 10px;
     }
 
     .nav-menu {
