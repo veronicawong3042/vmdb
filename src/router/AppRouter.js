@@ -17,7 +17,7 @@ import Header from "../components/Header";
 function AppRouter() {
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="vmdb">
             <GlobalProvider>
                 {/* Header Component */}
                 <Header />
