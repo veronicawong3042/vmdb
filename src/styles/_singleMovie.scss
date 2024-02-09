@@ -103,6 +103,7 @@ a:active{
 .genres{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .genre-details{
@@ -116,6 +117,10 @@ a:active{
 .overview-details{
     margin: 0.75rem 0;
     text-align: center;
+}
+
+.overview-details p{
+    text-align: left;
 }
 
 .watch-trailer{
