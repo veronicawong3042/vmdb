@@ -26,6 +26,16 @@ header {
 
         a:active, a:focus, a:hover{
             border-bottom: 3px solid black;
+            
+        }
+    }
+
+    label.logo:hover {
+        background-color: black;
+        border: 2px solid $theme-yellow;
+
+        a {
+            color: $theme-yellow;
         }
     }
 
