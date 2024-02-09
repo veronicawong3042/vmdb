@@ -27,6 +27,7 @@
 
     h2 {
       font-size: 1.5rem;
+      text-shadow: 1px 1px 5px black;
     }
 
     .more-info {
@@ -80,9 +81,6 @@
     right: 10px; 
 }
 
-
-
-
   @media (min-width: $tablet-small) {
     .hero-info {
       background: transparent;
@@ -104,11 +102,6 @@
     @media (min-width: $desktop-large) {
         .hero-info h2 {
             font-size: 2.5rem;
-        }
-
-        .hero-image{
-          object-position: 80% 20%;
-
         }
 
         .more-info{

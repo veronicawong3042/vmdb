@@ -6,7 +6,7 @@ function PageFavorite() {
   const { favorites } = useGlobalContext();
 
   return (
-    <div>
+    <div className="favorite-page">
       <h1 className="fav-heading">Favourites</h1>
       {favorites.length > 0 ? (
         <div className="fav-movies-container">

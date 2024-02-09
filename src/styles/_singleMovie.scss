@@ -1,6 +1,7 @@
 // Single Movie Page
 @use 'variables' as *;
 
+
 .movie-page{
     display: flex;
     align-items: center;
@@ -90,6 +91,7 @@
 .genres{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .genre-details{
@@ -103,6 +105,10 @@
 .overview-details{
     margin: 0.75rem 0;
     text-align: center;
+}
+
+.overview-details p{
+    text-align: left;
 }
 
 .watch-trailer{

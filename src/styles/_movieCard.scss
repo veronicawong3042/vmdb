@@ -4,8 +4,8 @@
 .movie-card {
 
     position: relative;
-    width: 185px;
-    height: 278px;
+    // width: 185px;
+    // height: 278px;
     // border: 2px solid green;
 
     .movie-card-image {
@@ -19,7 +19,7 @@
         position: absolute;
         top: 0;
         left: 0;
-    
+
         display: none;
     }
 }
@@ -47,27 +47,47 @@
     padding: .5rem;
     height: 260px;
     text-align: center;
-    backdrop-filter: blur(16px);
+    // backdrop-filter: blur(16px);
     z-index: 9999;
+
+
 
     .title-and-release {
 
         margin: 1rem .5rem;
-    
+
         .title {
             margin: 0;
         }
-    
+
         .release-date {
             font-size: 1rem;
             font-weight: 400;
             text-transform: capitalize;
             margin: 0;
         }
+
+        @media (min-width:87.5em) {
+
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .release-date {
+                font-size: 1.5rem;
+            }
+
+            .overview {
+                font-size: 1.5rem;
+            }
+
+
+        }
     }
-    
+
     .favorite {
-    
+
         position: relative;
         top: 0;
         right: 0;
@@ -78,7 +98,7 @@
         border: 1px solid black;
         border-radius: 50%;
         cursor: pointer;
-    
+
         svg {
             fill: black;
             position: absolute;
@@ -87,18 +107,18 @@
             top: 5px;
         }
     }
-    
+
     .favorited {
         position: relative;
-    
-    
+
+
         svg {
             position: absolute;
-    
+
             fill: red;
         }
     }
-    
+
     .more-info {
         position: absolute;
         left: 0;
@@ -111,17 +131,17 @@
         border-radius: 25px;
         cursor: pointer;
     }
-    
+
     .overview {
         text-align: left;
     }
-    
+
     .rating-and-favbutton {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    
+
     .rating {
         font-size: 1.2rem;
         margin: 0.5rem;
@@ -135,10 +155,58 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 185px;
-    height:260px;
+    height: 278px;
 
     img {
         display: none;
     }
 }
 
+@media (min-width: 87.5em) {
+    .movie-card .movie-card-image {
+        width: 300px;
+        height: auto;
+    }
+
+
+    .movie-card-container {
+        // width: 300px;
+        height: 100%;
+    }
+
+    .movie-card-container .more-info {
+        font-size: 1.5rem;
+        width: 8rem;
+        bottom: 3rem;
+    }
+
+    .movie-card-container .rating {
+        font-size: 2rem;
+    }
+
+    .movie-card-container .favorite {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .movie-card-container .favorite svg {
+        width: 1.2rem;
+        height: 1.2rem;
+        left: 6px;
+        top: 6px;
+    }
+
+    .no-poster {
+        display: block;
+        width: 300px;
+        height: auto;
+
+    }
+
+    .fav-movies-container .no-poster {
+        display: block;
+        width: 300px;
+        height: 100%;
+    }
+
+}
