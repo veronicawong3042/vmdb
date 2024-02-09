@@ -3,8 +3,15 @@
 
 .favorite-page {
     margin: 0 1rem;
+    margin-top: 7rem;
+
     p{
         text-align: center;
+    }
+
+
+    @media (width > $desktop-large) {
+        margin-top: 9rem;
     }
 }
 
