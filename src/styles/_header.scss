@@ -32,6 +32,7 @@ header {
 
 
     label.logo:active,
+    label.logo:focus,
     label.logo:hover {
         background-color: black;
         border: 2px solid $theme-yellow;
@@ -39,15 +40,6 @@ header {
             background-color: transparent;
             color: $theme-yellow;
         }
-    }
-
-    label.logo:focus {
-        color: $theme-yellow;
-    }
-
-    label.logo a:focus {
-        color: $theme-yellow;
-        border-radius: 10px;
     }
 
     .nav-menu {
