@@ -27,7 +27,7 @@ const SearchResults = () => {
       
       if (movies.length > 0) {
         return (
-            <div>
+            <div className='search-results-page'>
                 <h2 className="search-results">Search results for "{searchQuery}" :</h2>
                 <section className='search-results-posters'>
                    <MovieContainer moviesData={movies}/>
@@ -37,7 +37,7 @@ const SearchResults = () => {
     } else {
         return (
             <div>
-                <h2>We couldn't find any movies matching {searchQuery.trim() !== '' ? `${searchQuery}` : ''}</h2>
+                <h2>Sorry, we couldn't find any movies matching "{searchQuery.trim() !== '' ? `${searchQuery}` : ''}". <br></br>Please try again.</h2>
             </div>
         );
     }

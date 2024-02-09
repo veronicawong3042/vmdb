@@ -12,14 +12,14 @@ h1,h2,h3,h4,h5,h6 {
 .main-wrapper {
     margin: 0 auto;
     min-height: 100vh;
+    margin-top: 4rem;
     
     // @media (width > $tablet-large) {
     //     margin: 0 auto;
     // }
 }
 a:hover,
-a:focus,
-a:active{
+a:focus{
 
     color: $theme-yellow;
     background-color: black

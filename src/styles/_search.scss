@@ -1,12 +1,20 @@
 @use 'variables' as *;
 
+.search-results-page{
+    margin-top: 5rem;
+
+    @media (width > $desktop-large) {
+        margin-top: 7rem;
+    }
+}
+
 .movie-cards{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
 }
-.search-results{
+.search-results, h2{
     text-align: center;
     padding: 1rem 0;
 }

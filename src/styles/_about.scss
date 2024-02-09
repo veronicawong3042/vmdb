@@ -4,6 +4,11 @@
 .about {
     position: relative;
     margin: 1rem;
+    margin-top: 8rem;
+
+    @media (width > $desktop-large) {
+        margin-top: 9rem;
+    }
 
     h1 {
         margin: 3rem;
