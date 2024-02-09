@@ -1,9 +1,18 @@
 @use 'variables' as *;
 
+
+.favorite-page {
+    margin: 0 1rem;
+    p{
+        text-align: center;
+    }
+}
+
 .fav-heading {
     text-align: center;
     margin: 3rem;
 }
+
 
 .fav-movies-container {
     display: flex;
