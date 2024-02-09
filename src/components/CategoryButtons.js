@@ -14,33 +14,33 @@ function CategoryButtons ({categoryName = 'Popular', setCategoryName}){
   
     return(
         <div className="movie-categories">
-            <button className={`slider-button ${activeButton === "popular" ? "active" : ""}`} 
+            <div className={`slider-button ${activeButton === "popular" ? "active" : ""}`} 
             onClick={()=>{
                 handleButtonClick("popular")
                 setCategoryName('Popular')
             }}>
                 <FaRegStar />
                 <p>Popular</p>
-                </button>
+                </div>
             
-            <button className={`slider-button ${activeButton === "now-playing" ? "active" : ""}`} onClick={()=>{
+            <div className={`slider-button ${activeButton === "now-playing" ? "active" : ""}`} onClick={()=>{
                 handleButtonClick("now-playing")
                 setCategoryName('Now Playing')
             }}>
                 <LuAlarmClock />
                 <p>Now Playing</p>
-                </button>
+                </div>
 
-            <button className={`slider-button ${activeButton === "upcoming" ? "active" : ""}`} onClick={()=>{
+            <div className={`slider-button ${activeButton === "upcoming" ? "active" : ""}`} onClick={()=>{
                 handleButtonClick("upcoming")
                 setCategoryName('Upcoming')
 
             }}>
                 <RxCalendar />
                 <p>Upcoming</p>
-                </button>
+                </div>
 
-            <button className={`slider-button ${activeButton === "top-rated" ? "active" : ""}`}
+            <div className={`slider-button ${activeButton === "top-rated" ? "active" : ""}`}
              onClick={()=>{
                 handleButtonClick("top-rated")
                 setCategoryName('Top Rated')
@@ -48,7 +48,7 @@ function CategoryButtons ({categoryName = 'Popular', setCategoryName}){
             }}>
                 <LiaTrophySolid />
                 <p>Top Rated</p>
-                </button>
+                </div>
         </div>
     )
 }
