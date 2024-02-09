@@ -197,8 +197,9 @@
     }
 
     .no-poster {
+        display: block;
         width: 300px;
-        height: auto;
+        height: 100%;
     }
 
 }
