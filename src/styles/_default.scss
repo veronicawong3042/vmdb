@@ -17,12 +17,13 @@ h1,h2,h3,h4,h5,h6 {
     //     margin: 0 auto;
     // }
 }
+a:hover,
+a:focus,
+a:active{
 
-// a:hover,
-// a:focus,
-// a:visited{
-//     color: blue;
-// }
+    color: $theme-yellow;
+    background-color: black
+}
 
 a:active{
     color: red;
